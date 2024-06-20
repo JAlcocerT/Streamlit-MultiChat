@@ -1,0 +1,6 @@
+ollama==0.2.1 ##pip show ollama
+openai==0.28.1 #0.28.0 #https://pypi.org/project/openai/#history
+
+streamlit==1.35.0 #https://pypi.org/project/streamlit/#history
+
+#pip install -r requirements.txt
