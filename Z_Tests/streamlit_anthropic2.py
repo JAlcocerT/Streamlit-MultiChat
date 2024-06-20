@@ -22,7 +22,7 @@ st.title("Blog Title Generator")
 api_key = st.text_input("Enter your Anthropic API Key:", type="password")
 user_content = st.text_input("Enter the keyword for blog titles:")
 temperature = st.slider("Select Temperature", min_value=0.0, max_value=1.0, value=0.5, step=0.1)
-model = st.selectbox("Select Model", ("claude-3-opus-20240229", "claude-3-sonnet-20240229"))
+model = st.selectbox("Select Model", ("claude-3-opus-20240229", "claude-3-sonnet-20240229","claude-3.5-sonnet-20240620"))
 
 if st.button("Generate Titles"):
     if not user_content:
