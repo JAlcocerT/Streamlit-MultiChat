@@ -138,7 +138,7 @@ import streamlit as st
 def page_three():
     with st.sidebar:
         st.title('🤖💬 OpenAI Chatbot')
-        if 'OPENAI_API_KEY' in st.secrets:
+        if 'OPENAI_API_KEY' in st.secrets and len(st.secrets['OPENAI_API_KEY']) > 30:
             st.success('API key already provided!', icon='✅')
             openai.api_key = st.secrets['OPENAI_API_KEY']
         else:
@@ -146,7 +146,7 @@ def page_three():
             if not (openai.api_key.startswith('sk-') and len(openai.api_key)>30):
                 st.warning('Please, enter your credentials', icon='⚠️')
             else:
-                st.success('Proceed to entering your prompts!', icon='👉')
+                st.success('Proceed with your Prompts!', icon='👉')
 
         model_choice = st.selectbox(
             'Choose the model:',
