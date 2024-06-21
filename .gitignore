@@ -3,3 +3,5 @@ multichat/
 
 helpers/__pycache__/*
 __pycache__/
+
+Z_Tests/.env

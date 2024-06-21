@@ -1,6 +1,6 @@
 # Streamlit-MultiChat
 
-[![CI/CD Pipeline](https://github.com/JAlcocerT/Streamlit-MultiChat/actions/workflows/Streamlit_GH_Actions.yml/badge.svg)](https://github.com/JAlcocerT/JAlcocerT/Streamlit-MultiChat/actions/workflows/Streamlit_GH_Actions.yml)
+[![CI/CD Pipeline](https://github.com/JAlcocerT/streamlitmultichat/actions/workflows/streamlit_GH_Actions.yml/badge.svg)](https://github.com/JAlcocerT/Streamlit-MultiChat/actions/workflows/streamlit_GH_Actions.yml)
 
 
 ## Getting Started 
