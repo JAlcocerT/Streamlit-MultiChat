@@ -1,8 +1,12 @@
 import streamlit as st
 from typing import Generator
+
 from groq import Groq
+import openai
+
 from config import Config
 from helpers.llm_helper import chat, stream_parser
+
 import os
 
 st.set_page_config(page_icon="💬", layout="wide", page_title="Multi-Chat Bot")
@@ -69,7 +73,9 @@ def page_one():
 
         try:
             if model_option in Config.OLLAMA_MODELS:
-                llm_stream = chat(prompt, model=model_option)
+                llm_stream = chat(prompt,
+                                  model=model_option,
+                                  temperature=0.7)
                 stream_output = st.write_stream(stream_parser(llm_stream))
             else:
                 chat_completion = client.chat.completions.create(
@@ -82,6 +88,7 @@ def page_one():
                         for m in st.session_state.messages
                     ],
                     max_tokens=max_tokens,
+                    temperature=0.6,
                     stream=True
                 )
 
@@ -127,13 +134,9 @@ def page_two():
 
             st.session_state.messages.append({"role": "assistant", "content": stream_output})
 
-# # Choose page
-# pages = {'Groq API': page_one, 'Local with Ollama': page_two}
-# selected_page = st.sidebar.selectbox("Choose a page:", options=list(pages.keys()))
-# pages[selected_page]()
 
-import openai
-import streamlit as st
+# import openai
+# import streamlit as st
 
 def page_three():
     with st.sidebar:
@@ -143,15 +146,23 @@ def page_three():
             openai.api_key = st.secrets['OPENAI_API_KEY']
         else:
             openai.api_key = st.text_input('Enter OpenAI API token:', type='password')
-            if not (openai.api_key.startswith('sk-') and len(openai.api_key)>30):
+            if not (openai.api_key.startswith('sk-') and len(openai.api_key) > 30):
                 st.warning('Please, enter your credentials', icon='⚠️')
             else:
                 st.success('Proceed with your Prompts!', icon='👉')
 
         model_choice = st.selectbox(
             'Choose the model:',
-            ['gpt-3.5-turbo', 'gpt-4-turbo-preview','gpt-4o'],
+            ['gpt-3.5-turbo', 'gpt-4-turbo-preview', 'gpt-4o'],
             index=0
+        )
+
+        temperature = st.slider(
+            'Select temperature for the model:',
+            min_value=0.0,
+            max_value=1.0,
+            value=0.7,
+            step=0.01
         )
 
     if "messages" not in st.session_state:
@@ -171,11 +182,14 @@ def page_three():
             for response in openai.ChatCompletion.create(
                 model=model_choice,
                 messages=[{"role": m["role"], "content": m["content"]}
-                          for m in st.session_state.messages], stream=True):
+                          for m in st.session_state.messages], 
+                temperature=temperature,  # Use the selected temperature here
+                stream=True):
                 full_response += response.choices[0].delta.get("content", "")
                 message_placeholder.markdown(full_response + "▌")
             message_placeholder.markdown(full_response)
         st.session_state.messages.append({"role": "assistant", "content": full_response})
+
 
 # Choose page
 pages = {'Groq API': page_one, 'Local with Ollama': page_two, 'OpenAI API': page_three}

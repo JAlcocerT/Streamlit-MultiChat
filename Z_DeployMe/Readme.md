@@ -10,6 +10,8 @@ cd Z_DeployMe
 docker-compose up -d
 ```
 
+By default, it will use the Docker Image built with GH Actions and [available at ghcr](https://github.com/JAlcocerT/Streamlit-MultiChat/pkgs/container/streamlit-multichat)
+
 > Go to `localhost:8501` to interact with the bots via Streamlit UI
 
 ### Optional
