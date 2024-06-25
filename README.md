@@ -1,24 +1,15 @@
-![CI/CD Pipeline Status](https://github.com/JAlcocerT/streamlitmultichat/actions/workflows/streamlit_GH_Actions.yml/badge.svg)
-
-[![CI/CD Pipeline](https://github.com/JAlcocerT/streamlitmultichat/actions/workflows/streamlit_GH_Actions.yml/badge.svg)](https://github.com/JAlcocerT/streamlit-multiChat/actions/workflows/streamlit_GH_Actions.yml)
-
-<div align="center" style="line-height: 1;">
-  <a href="https://github.com/JAlcocerT/Streamlit-MultiChat?tab=GPL-3.0-1-ov-file" style="margin: 2px;">
-    <img alt="Code License" src="https://img.shields.io/badge/Code_License-MIT-f5de53?&color=f5de53" style="display: inline-block; vertical-align: middle;"/>
-  </a>
-  <a href="https://github.com/JAlcocerT/Streamlit-MultiChat?tab=GPL-3.0-1-ov-file" style="margin: 2px;">
-    <img alt="Code License" src="https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0" style="display: inline-block; vertical-align: middle;"/>
-  </a>
-  <a href="https://github.com/JAlcocerT/Streamlit-MultiChat/actions/workflows/streamlit_GH_Actions.yml" style="margin: 2px;">
-    <img alt="Model License" src="https://github.com/JAlcocerT/streamlitmultichat/actions/workflows/streamlit_GH_Actions.yml/badge.svg" style="display: inline-block; vertical-align: middle;"/>
-  </a>
-</div>
-
-[![CI/CD Pipeline](https://github.com/JAlcocerT/openai-chatbot/actions/workflows/GithubActions-CICD.yml/badge.svg)](https://github.com/JAlcocerT/openai-chatbot/actions/workflows/GithubActions-CICD.yml)
-
 # Streamlit-MultiChat
 
-Use commercial models: OpenAI / Anthropic or Open and Local LLMs with one Streamlit Web App.
+Use commercial models: OpenAI / Anthropic / Open and Local LLMs with one Streamlit Web App.
+<div align="center" style="line-height: 1;">
+  <a href="https://github.com/JAlcocerT/Streamlit-MultiChat?tab=GPL-3.0-1-ov-file" style="margin: 2px;">
+    <img alt="Code License" src="https://img.shields.io/badge/License-GPLv3-blue.svg" style="display: inline-block; vertical-align: middle;"/>
+  </a>
+
+  <a href="https://github.com/JAlcocerT/Streamlit-MultiChat/actions/workflows/streamlit_GH_Actions.yml" style="margin: 2px;">
+    <img alt="Model License" src="https://github.com/JAlcocerT/Streamlit-MultiChat/actions/workflows/streamlit_GH_Actions.yml/badge.svg" style="display: inline-block; vertical-align: middle;"/>
+  </a>
+</div>
 
 ## Getting Started 
 
@@ -54,6 +45,8 @@ streamlit run Z_multichat.py
 
 
 ## Thanks to ❤️
+
+Projects I got inspiration from / consolidated in this App were [tested here](https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_Tests):
 
 * https://github.com/dataprofessor/openai-chatbot
 

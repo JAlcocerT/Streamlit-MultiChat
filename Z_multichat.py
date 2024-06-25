@@ -193,5 +193,5 @@ def page_three():
 
 # Choose page
 pages = {'Groq API': page_one, 'Local with Ollama': page_two, 'OpenAI API': page_three}
-selected_page = st.sidebar.selectbox("Choose a page:", options=list(pages.keys()))
+selected_page = st.sidebar.selectbox("Choose the Model Provider:", options=list(pages.keys()))
 pages[selected_page]()
