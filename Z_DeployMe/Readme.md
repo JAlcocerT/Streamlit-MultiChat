@@ -16,7 +16,7 @@ By default, it will use the Docker Image built with GH Actions and [available at
 
 ### Optional
 
-Build your own Image:
+By default, Im using buildx to create ARM64 and x86 images, but you can Build your own Image:
 
 ```sh
 #git clone https://github.com/JAlcocerT/Streamlit-MultiChat
