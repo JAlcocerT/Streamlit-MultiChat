@@ -33,5 +33,5 @@ jobs:
         push: true
         platforms: linux/amd64,linux/arm64
         tags: |
-          ghcr.io/jalcocert/streamlit-multichat:v1.1
+          ghcr.io/jalcocert/streamlit-multichat:v1.0
           ghcr.io/jalcocert/streamlit-multichat:latest

@@ -1,0 +1,11 @@
+# chromadb==0.4.8
+# langchain==0.0.9
+# #langchain-community==0.2.6 #https://pypi.org/project/langchain-community/#history
+# # !pip install -U langchain-community
+# langchain-core==0.2.10
+# langchain-text-splitters==0.2.2
+# openai==1.0.0
+# tiktoken==0.7.0
+
+#pip install -r requirements_test.txt
+#pip install --no-cache-dir -r requirements_test.txt

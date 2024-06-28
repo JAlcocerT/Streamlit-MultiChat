@@ -2,7 +2,7 @@ version: '3'
 
 services:
   streamlit-multichat:
-    image: ghcr.io/jalcocert/streamlit-multichat:v1.0
+    image: ghcr.io/jalcocert/streamlit-multichat #:v1.0
     container_name: streamlit_multichat
     volumes:
       - ai_streamlit_multichat:/app
@@ -11,6 +11,7 @@ services:
       mkdir -p /app/.streamlit && \
       echo 'OPENAI_API_KEY = \"sk-proj-openaiAPIhere\"' > /app/.streamlit/secrets.toml && \
       echo 'GROQ_API_KEY = \"gsk_groqAPIhere\"' >> /app/.streamlit/secrets.toml && \
+      echo 'ANTHROPIC_API_KEY = \"sk-ant-yourANTHROPICapihere\"' >> /app/.streamlit/secrets.toml && \      
       streamlit run Z_multichat.py"
     ports:
       - "8501:8501"

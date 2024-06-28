@@ -21,7 +21,7 @@ Try the Project quickly with [Python Venv's](https://fossengineer.com/python-dep
 
 ```sh
 git clone https://github.com/JAlcocerT/Streamlit-MultiChat
-python -m venv multichat #create it
+python -m venv multichat #create the venv
 
 multichat\Scripts\activate #activate venv (windows)
 source multichat/bin/activate #(linux)
@@ -44,6 +44,13 @@ streamlit run Z_multichat.py
 </details>
 
 
+<div align="center">
+  <img src="streamlit-multichat.png" alt="MultiChat" style="width:100%;"/>
+  <p><em>Chat with Several Models with Streamlit</em></p>
+</div>
+
+---
+
 ## Thanks to ❤️
 
 Projects I got inspiration from / consolidated in this App were [tested here](https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_Tests):
@@ -52,7 +59,8 @@ Projects I got inspiration from / consolidated in this App were [tested here](ht
 
 * https://github.com/AIDevBytes/Streamlit-Ollama-Chatbot
 
-* https://github.com/JAlcocerT/groq_streamlit_demo
+* https://github.com/tonykipkemboi/groq_streamlit_demo -> Groq + Streamlit Chat
+
 * https://github.com/TirendazAcademy/Streamlit-Tutorials/blob/main/Blog-Generator-App-with-Claude-API/app.py
 * https://www.youtube.com/watch?v=ximj9QWle-g
 
