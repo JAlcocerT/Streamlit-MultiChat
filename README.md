@@ -1,4 +1,6 @@
-# Streamlit-MultiChat
+<div align="center">
+  <h1>Streamlit-MultiChat</h1>
+</div>
 
 Use commercial models: OpenAI / Anthropic / Open and Local LLMs with one Streamlit Web App.
 <div align="center" style="line-height: 1;">
@@ -10,6 +12,9 @@ Use commercial models: OpenAI / Anthropic / Open and Local LLMs with one Streaml
     <img alt="Model License" src="https://github.com/JAlcocerT/Streamlit-MultiChat/actions/workflows/streamlit_GH_Actions.yml/badge.svg" style="display: inline-block; vertical-align: middle;"/>
   </a>
 </div>
+
+[![GitHub release](https://img.shields.io/github/release/xmrig/xmrig-proxy/all.svg)](https://github.com/xmrig/xmrig-proxy/releases)
+[![GitHub Release Date](https://img.shields.io/github/release-date-pre/xmrig/xmrig-proxy.svg)](https://github.com/xmrig/xmrig-proxy/releases)
 
 ## Getting Started 
 
