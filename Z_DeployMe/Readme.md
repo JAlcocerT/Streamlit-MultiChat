@@ -14,6 +14,10 @@
 Clone the repository and use the Docker-Compose with your credentials:
 
 ```sh
+docker pull ghcr.io/jalcocert/streamlit-multichat:latest
+```
+
+```sh
 git clone https://github.com/JAlcocerT/Streamlit-MultiChat
 
 cd Z_DeployMe

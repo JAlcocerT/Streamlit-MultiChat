@@ -1,0 +1,32 @@
+name: SliDev CI/CD
+on:
+  push:
+    branches:
+      - main  # replace with the name of your default branch if not 'main'
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 20  # specify the Node.js version you're using
+
+      - name: Install Slidev CLI
+        run: npm install -g @slidev/cli
+
+      - name: Install dependencies and build
+        run: |
+          npm install
+          npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.CICD_TOKEN_MultiChat }}
+          publish_dir: ./slidev/dist

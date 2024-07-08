@@ -5,14 +5,14 @@ theme: seriph
 # like them? see https://unsplash.com/collections/94734566/slidev
 background: https://cover.sli.dev
 # some information about your slides (markdown enabled)
-title: Welcome to Slidev
+title: Streamlit Multichat PPT
 info: |
   ## Slidev Starter Template
   Presentation slides for developers.
 
   Learn more at [Sli.dev](https://sli.dev)
 # apply unocss classes to the current slide
-class: text-center
+class: text-left
 # https://sli.dev/custom/highlighters.html
 highlighter: shiki
 # https://sli.dev/guide/drawing
@@ -24,13 +24,13 @@ transition: slide-left
 mdc: true
 ---
 
-# Welcome to Slidev
+# Streamlit MultiChat
 
-Presentation slides for developers
+Chat with multiple LLMs from one App.
 
 <div class="pt-12">
   <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
-    Press Space for next page <carbon:arrow-right class="inline"/>
+    Press Space and Check how it's built <carbon:arrow-right class="inline"/>
   </span>
 </div>
 
@@ -38,7 +38,7 @@ Presentation slides for developers
   <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
     <carbon:edit />
   </button>
-  <a href="https://github.com/slidevjs/slidev" target="_blank" alt="GitHub" title="Open in GitHub"
+  <a href="https://github.com/JAlcocerT/Streamlit-Multichat" target="_blank" alt="GitHub" title="Open in GitHub"
     class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
     <carbon-logo-github />
   </a>
@@ -48,25 +48,47 @@ Presentation slides for developers
 The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
 -->
 
+
+---
+layout: two-cols
+layoutClass: gap-16
+---
+
+# Why Streamlit for a MultiChat App?
+
+Streamlit can help to create a unified MultiChat app with Language Learning Models (LLMs)
+
+- 🔄 **Unified Experience** - Select different LLM providers from one place, without switching between platforms.
+- 👥 **Multi-User Support** - Handle multiple users and conversations at once.
+- 🛠 **Customizable** - Easily adapt the app to different learning methods and requirements.
+- 🌐 **Web-Based** - Access your MultiChat app from anywhere, on any device.
+
+::right::
+
+<Toc v-click minDepth="1" maxDepth="2"></Toc>
+
 ---
 transition: fade-out
 ---
 
-# What is Slidev?
+# What is Streamlit?
 
-Slidev is a slides maker and presenter designed for developers, consist of the following features
+Streamlit is a fast, user-friendly tool to create custom web apps for machine learning and data science, offering the following features:
 
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - themes can be shared and re-used as npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embed Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export to PDF, PPTX, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - virtually anything that's possible on a webpage is possible in Slidev
+- 📝 **Code-based** - Create web apps using Python scripts, focusing on data and models first.
+- 🎨 **Customizable** - Easily design your app's layout and appearance.
+- 🧑‍💻 **Developer Friendly** - Built for developers with features like hot-reloading and modular code.
+- 🤹 **Interactive** - Easily add widgets like sliders, dropdowns, and buttons to interact with your data.
+- 📊 **Data-Ready** - Built-in support for displaying data frames, charts, and other visualizations.
+- 🚀 **Fast Deployment** - One-click deployment to share your apps with the world.
+
+
+
 <br>
 <br>
 
-Read more about [Why Slidev?](https://sli.dev/guide/why)
+Read more about [Why Streamlit?](https://streamlit.io/why-streamlit)
+
 
 <!--
 You can have `style` tag in markdown to override the style for the current page.
@@ -94,46 +116,20 @@ transition: slide-up
 level: 2
 ---
 
-# Navigation
+# What's based on?
 
 Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/navigation.html)
 
-## Keyboard Shortcuts
+## Supported LLMs
 
 |     |     |
 | --- | --- |
-| <kbd>right</kbd> / <kbd>space</kbd>| next animation or slide |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd> | previous slide |
-| <kbd>down</kbd> | next slide |
+| <kbd>OpenAI API</kbd> | Most Popular Propietary LLMs (ATM) |
+| <kbd>Anthropic API</kbd>  | The challenger of the Throne |
+| <kbd>Groq API</kbd> | Fast Inference with Free Models |
+| <kbd>Ollama API</kbd> | Also local LLMs! |
 
-<!-- https://sli.dev/guide/animations.html#click-animations -->
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-  alt=""
-/>
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
 
----
-layout: two-cols
-layoutClass: gap-16
----
-
-# Table of contents
-
-You can use the `Toc` component to generate a table of contents for your slides:
-
-```html
-<Toc minDepth="1" maxDepth="1"></Toc>
-```
-
-The title will be inferred from your slide content, or you can override it with `title` and `level` in your frontmatter.
-
-::right::
-
-<Toc v-click minDepth="1" maxDepth="2"></Toc>
 
 ---
 layout: image-right
@@ -142,25 +138,21 @@ image: https://cover.sli.dev
 
 # Code
 
-Use code snippets and get the highlighting directly, and even types hover![^1]
+Use code snippets and get the highlighting directly....
 
-```ts {all|5|7|7-8|10|all} twoslash
-// TwoSlash enables TypeScript hover information
-// and errors in markdown code blocks
-// More at https://shiki.style/packages/twoslash
+```py {all|5|7|7-8|10|all} twoslash
+import streamlit as st
 
-import { computed, ref } from 'vue'
+# Create a slider widget
+slider_value = st.slider('Select a value:', 0, 10)
 
-const count = ref(0)
-const doubled = computed(() => count.value * 2)
-
-doubled.value = 2
+# Display the selected value
+st.write(f'You selected {slider_value}')
 ```
 
 <arrow v-click="[4, 5]" x1="350" y1="310" x2="195" y2="334" color="#953" width="2" arrowSize="1" />
 
-<!-- This allow you to embed external code blocks -->
-<<< @/snippets/external.ts#snippet
+
 
 <!-- Footer -->
 [^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
@@ -192,73 +184,58 @@ Notes can also sync with clicks
 level: 2
 ---
 
-# Shiki Magic Move
+# How it Works
 
 Powered by [shiki-magic-move](https://shiki-magic-move.netlify.app/), Slidev supports animations across multiple code snippets.
 
 Add multiple code blocks and wrap them with <code>````md magic-move</code> (four backticks) to enable the magic move. For example:
 
 ````md magic-move {lines: true}
-```ts {*|2|*}
-// step 1
-const author = reactive({
-  name: 'John Doe',
-  books: [
-    'Vue 2 - Advanced Guide',
-    'Vue 3 - Basic Guide',
-    'Vue 4 - The Mystery'
-  ]
-})
+```py {*|2|*}
+#step 1 - The code checks the API Keys
+if 'OPENAI_API_KEY' in st.secrets and len(st.secrets['OPENAI_API_KEY']) > 30:
+    st.success('API key already provided!', icon='✅')
+    openai.api_key = st.secrets['OPENAI_API_KEY']
+else:
+    openai.api_key = st.text_input('Enter OpenAI API token:', type='password')
+    if not (openai.api_key.startswith('sk-') and len(openai.api_key) > 30):
+        st.warning('Please, enter your credentials', icon='⚠️')
+    else:
+        st.success('Proceed with your Prompts!', icon='👉')
 ```
 
-```ts {*|1-2|3-4|3-4,8}
-// step 2
-export default {
-  data() {
-    return {
-      author: {
-        name: 'John Doe',
-        books: [
-          'Vue 2 - Advanced Guide',
-          'Vue 3 - Basic Guide',
-          'Vue 4 - The Mystery'
-        ]
-      }
-    }
-  }
-}
+```py {*|1-2|3-4|3-4,8}
+// step 2 - We indicate the API compatible LLMs
+model_choice = st.selectbox(
+            'Choose the model:',
+            ['gpt-3.5-turbo', 'gpt-4-turbo-preview', 'gpt-4o'],
+            index=0
+        )
 ```
 
-```ts
-// step 3
-export default {
-  data: () => ({
-    author: {
-      name: 'John Doe',
-      books: [
-        'Vue 2 - Advanced Guide',
-        'Vue 3 - Basic Guide',
-        'Vue 4 - The Mystery'
-      ]
-    }
-  })
-}
+```py
+# step 3 - And we add the possibility to tweak the 'Creativity'
+temperature = st.slider(
+    'Select temperature for the model:',
+    min_value=0.0,
+    max_value=1.0,
+    value=0.7,
+    step=0.01
+)
 ```
 
-Non-code blocks are ignored.
+Non-code blocks are ignored. This is Ignored!
 
 ```vue
-<!-- step 4 -->
-<script setup>
-const author = {
-  name: 'John Doe',
-  books: [
-    'Vue 2 - Advanced Guide',
-    'Vue 3 - Basic Guide',
-    'Vue 4 - The Mystery'
-  ]
-}
-</script>
+for response in openai.ChatCompletion.create(
+                model=model_choice,
+                messages=[{"role": m["role"], "content": m["content"]}
+                          for m in st.session_state.messages], 
+                temperature=temperature,  # Use the selected temperature here
+                stream=True):
+                full_response += response.choices[0].delta.get("content", "")
+                message_placeholder.markdown(full_response + "▌")
+            message_placeholder.markdown(full_response)
 ```
 ````
 
@@ -285,11 +262,9 @@ Check out [the guides](https://sli.dev/builtin/components.html) for more.
 </div>
 <div>
 
-```html
-<Tweet id="1390115482657726468" />
-```
+We had very recent anouncements...
 
-<Tweet id="1390115482657726468" scale="0.65" />
+<Tweet id="1803790676988920098" scale="0.45" />
 
 </div>
 </div>
@@ -326,7 +301,7 @@ theme: seriph
 ---
 ```
 
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true" alt="">
+<img border="rounded" src="https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/streamlit-multichat.png?raw=true" alt="">
 
 <img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true" alt="">
 
@@ -460,16 +435,8 @@ LaTeX is supported out-of-box. Powered by [KaTeX](https://katex.org/).
 
 <div h-3 />
 
-Inline $\sqrt{3x-1}+(1+x)^2$
-
-Block
-$$ {1|3|all}
-\begin{aligned}
-\nabla \cdot \vec{E} &= \frac{\rho}{\varepsilon_0} \\
-\nabla \cdot \vec{B} &= 0 \\
-\nabla \times \vec{E} &= -\frac{\partial\vec{B}}{\partial t} \\
-\nabla \times \vec{B} &= \mu_0\vec{J} + \mu_0\varepsilon_0\frac{\partial\vec{E}}{\partial t}
-\end{aligned}
+$$
+\theta = \theta - \alpha \cdot \nabla_\theta J( \theta),
 $$
 
 [Learn more](https://sli.dev/guide/syntax#latex)
@@ -482,68 +449,63 @@ You can create diagrams / graphs from textual descriptions, directly in your Mar
 
 <div class="grid grid-cols-4 gap-5 pt-4 -mb-6">
 
-```mermaid {scale: 0.5, alt: 'A simple sequence diagram'}
-sequenceDiagram
-    Alice->John: Hello John, how are you?
-    Note over Alice,John: A typical interaction
-```
 
 ```mermaid {theme: 'neutral', scale: 0.8}
 graph TD
-B[Text] --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
+A[Raw Text Data] --> B[Preprocessing]
+B --> C[Tokenization]
+C --> D[Model Training]
+D --> E[Trained Model]
 ```
 
-```mermaid
+```mermaid {scale: 0.3}
 mindmap
-  root((mindmap))
-    Origins
-      Long history
-      ::icon(fa fa-book)
-      Popularisation
-        British popular psychology author Tony Buzan
-    Research
-      On effectiveness<br/>and features
-      On Automatic creation
-        Uses
-            Creative techniques
-            Strategic planning
-            Argument mapping
-    Tools
-      Pen and paper
-      Mermaid
+  root((LLMs))
+    Transformers
+      Attention Mechanisms
+      ::icon(fa fa-eye)
+      Multi-Head Attention
+        BERT
+        GPT
+    Neural Networks
+      Layers
+      ::icon(fa fa-layer-group)
+      Activation Functions
+        ReLU
+        Sigmoid
+    Gradient Descent
+      Learning Rate
+      ::icon(fa fa-chart-line)
+      Convergence
+        Stochastic Gradient Descent
+        Batch Gradient Descent
+    Overfitting
+      Regularization
+      ::icon(fa fa-balance-scale)
+      Techniques
+        Dropout
+        Early Stopping
 ```
 
 ```plantuml {scale: 0.7}
 @startuml
 
-package "Some Group" {
-  HTTP - [First Component]
-  [Another Component]
-}
-
-node "Other Groups" {
-  FTP - [Second Component]
-  [First Component] --> FTP
+actor User
+node "Streamlit App" {
+  User --> [Streamlit App]
 }
 
 cloud {
-  [Example 1]
+  [OpenAI]
+  [Anthropic]
+  [Groq]
+  [Ollama]
 }
 
-database "MySql" {
-  folder "This is my folder" {
-    [Folder 3]
-  }
-  frame "Foo" {
-    [Frame 4]
-  }
-}
-
-[Another Component] --> [Example 1]
-[Example 1] --> [Folder 3]
-[Folder 3] --> [Frame 4]
+[Streamlit App] --> [OpenAI]
+[Streamlit App] --> [Anthropic]
+[Streamlit App] --> [Groq]
+[Streamlit App] --> [Ollama]
 
 @enduml
 ```
@@ -551,58 +513,6 @@ database "MySql" {
 </div>
 
 [Learn More](https://sli.dev/guide/syntax.html#diagrams)
-
----
-foo: bar
-dragPos:
-  square: 691,32,167,_,-16
----
-
-# Draggable Elements
-
-Double-click on the draggable elements to edit their positions.
-
-<br>
-
-###### Directive Usage
-
-```md
-<img v-drag="'square'" src="https://sli.dev/logo.png">
-```
-
-<br>
-
-###### Component Usage
-
-```md
-<v-drag text-3xl>
-  <carbon:arrow-up />
-  Use the `v-drag` component to have a draggable container!
-</v-drag>
-```
-
-<v-drag pos="663,206,261,_,-15">
-  <div text-center text-3xl border border-main rounded>
-    Double-click me!
-  </div>
-</v-drag>
-
-<img v-drag="'square'" src="https://sli.dev/logo.png">
-
-###### Draggable Arrow
-
-```md
-<v-drag-arrow two-way />
-```
-
-<v-drag-arrow pos="67,452,253,46" two-way op70 />
-
----
-src: ./pages/multiple-entries.md
-hide: false
----
-
----
 
 # Monaco Editor
 

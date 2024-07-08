@@ -13,3 +13,11 @@ Learn more about Slidev on [documentations](https://sli.dev/).
 ---
 
 * Add Icons with - https://slidev.icons.lightvue.org/9
+
+---
+
+```sh
+npm run build
+# npm install -g serve
+# serve -s dist
+```
