@@ -1,0 +1,12 @@
+__py__cache__/
+.github/
+
+#.streamlit/secrets.toml
+
+docs/
+
+multichat/
+slidev/
+Z_Tests/
+
+streamlit-multichat.png

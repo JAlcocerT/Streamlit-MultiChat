@@ -1,5 +1,16 @@
 ## Deploy Streamlit MultiChat
 
+<div align="center" style="line-height: 1;">
+  <a href="https://opensource.org/license/gpl-3-0" style="margin: 2px;">
+    <img alt="Code License" src="https://img.shields.io/badge/License-GPLv3-blue.svg" style="display: inline-block; vertical-align: middle;"/>
+  </a>
+
+
+</div>
+
+[![GitHub release](https://img.shields.io/github/release/xmrig/xmrig-proxy/all.svg)](https://github.com/xmrig/xmrig-proxy/releases)
+[![GitHub Release Date](https://img.shields.io/github/release-date-pre/xmrig/xmrig-proxy.svg)](https://github.com/xmrig/xmrig-proxy/releases)
+
 Clone the repository and use the Docker-Compose with your credentials:
 
 ```sh
@@ -16,7 +27,7 @@ By default, it will use the Docker Image built with GH Actions and [available at
 
 ### Optional
 
-By default, Im using buildx to create ARM64 and x86 images, but you can Build your own Image:
+By default, Im using **buildx to create ARM64 and x86** images, but you can Build your own Image:
 
 ```sh
 #git clone https://github.com/JAlcocerT/Streamlit-MultiChat
@@ -37,10 +48,12 @@ By default, Im using buildx to create ARM64 and x86 images, but you can Build yo
 #               echo 'GROQ_API_KEY = \"gsk_groqAPIhere\"' >> /app/.streamlit/secrets.toml && \
 #               streamlit run Z_multichat.py"
 
-#podman run -p .....
+# podman run -d --name=phidata_yt_groq -p 8502:8501 -e GROQ_API_KEY=your_api_key_here streamlitmultichat tail -f /dev/null
 ```
+
+Once built, your image will be visible: `docker images`
 
 Why would I want to build it?
 
-* You want to run it on a Raspberry Pi (Any other SBC, ARM architecture)
+* You want to run it on a different architecture (Any other SBC: ARM32, ...)
 * You want to build the image from the source, because why not

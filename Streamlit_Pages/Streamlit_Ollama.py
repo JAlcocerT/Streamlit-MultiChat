@@ -1,6 +1,6 @@
 #https://github.com/AIDevBytes/Streamlit-Ollama-Chatbot
 
-from config import Config
+from Streamlit_Pages.config import Config
 import streamlit as st
 
 from helpers.llm_helper import chat, stream_parser

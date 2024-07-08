@@ -1,4 +1,6 @@
-## Thanks To ❤️
+In this folder is how I've been iterating.
+
+## Thanks To Python Venv's❤️
 
 I have been testing the projects here before including them in the MultiChat.
 

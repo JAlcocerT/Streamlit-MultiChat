@@ -1,6 +1,6 @@
 import streamlit as st
 
-from config import Config
+from Streamlit_Pages.config import Config
 
 import os
 

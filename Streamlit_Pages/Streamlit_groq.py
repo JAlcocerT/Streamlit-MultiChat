@@ -4,7 +4,7 @@ from typing import Generator
 from groq import Groq
 
 import streamlit as st
-#from config import Config
+from Streamlit_Pages.config import Config
 
 models = {
     "gemma-7b-it": {"name": "Gemma-7b-it via Groq", "tokens": 8192, "developer": "Google"},

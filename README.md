@@ -2,19 +2,23 @@
   <h1>Streamlit-MultiChat</h1>
 </div>
 
-Use commercial models: OpenAI / Anthropic / Open and Local LLMs with one Streamlit Web App.
-<div align="center" style="line-height: 1;">
-  <a href="https://github.com/JAlcocerT/Streamlit-MultiChat?tab=GPL-3.0-1-ov-file" style="margin: 2px;">
-    <img alt="Code License" src="https://img.shields.io/badge/License-GPLv3-blue.svg" style="display: inline-block; vertical-align: middle;"/>
-  </a>
+Use **many large language models**: OpenAI / Anthropic / Open / Local LLM's with **one Streamlit Web App**.
 
-  <a href="https://github.com/JAlcocerT/Streamlit-MultiChat/actions/workflows/streamlit_GH_Actions.yml" style="margin: 2px;">
-    <img alt="Model License" src="https://github.com/JAlcocerT/Streamlit-MultiChat/actions/workflows/streamlit_GH_Actions.yml/badge.svg" style="display: inline-block; vertical-align: middle;"/>
+
+<div align="center">
+  <a href="https://github.com/JAlcocerT/Streamlit-MultiChat?tab=GPL-3.0-1-ov-file" style="margin-right: 5px;">
+    <img alt="Code License" src="https://img.shields.io/badge/License-GPLv3-blue.svg" />
+  </a>
+  <a href="https://github.com/JAlcocerT/Streamlit-MultiChat/actions/workflows/Streamlit_GHA_MultiArch.yml" style="margin-right: 5px;">
+    <img alt="GH Actions Workflow" src="https://github.com/JAlcocerT/Streamlit-MultiChat/actions/workflows/Streamlit_GHA_MultiArch.yml/badge.svg" />
+  </a>
+  <a href="https://GitHub.com/JAlcocerT/Streamlit-Multichat/graphs/commit-activity" style="margin-right: 5px;">
+    <img alt="Mantained" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
+  </a>
+  <a href="https://www.python.org/downloads/release/python-312">
+    <img alt="Python Version" src="https://img.shields.io/badge/python-3.12-blue.svg" />
   </a>
 </div>
-
-[![GitHub release](https://img.shields.io/github/release/xmrig/xmrig-proxy/all.svg)](https://github.com/xmrig/xmrig-proxy/releases)
-[![GitHub Release Date](https://img.shields.io/github/release-date-pre/xmrig/xmrig-proxy.svg)](https://github.com/xmrig/xmrig-proxy/releases)
 
 ## Getting Started 
 
@@ -54,11 +58,21 @@ streamlit run Z_multichat.py
   <p><em>Chat with Several Models with Streamlit</em></p>
 </div>
 
+* **Alternatively** - Use the [Docker Image](https://github.com/JAlcocerT/Streamlit-MultiChat/pkgs/container/streamlit-multichat)
+
+```sh
+docker pull ghcr.io/jalcocert/streamlit-multichat:latest
+```
+
 ---
 
 ## Thanks to ❤️
 
-Projects I got inspiration from / consolidated in this App were [tested here](https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_Tests):
+Projects I got inspiration from / consolidated in this App were [tested here](https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_Tests): `./Z_Tests`
+
+<details>
+  <summary>Check the Projects 👈</summary>
+  &nbsp;
 
 * https://github.com/dataprofessor/openai-chatbot
 
@@ -67,6 +81,8 @@ Projects I got inspiration from / consolidated in this App were [tested here](ht
 * https://github.com/tonykipkemboi/groq_streamlit_demo -> Groq + Streamlit Chat
 
 * https://github.com/TirendazAcademy/Streamlit-Tutorials/blob/main/Blog-Generator-App-with-Claude-API/app.py
-* https://www.youtube.com/watch?v=ximj9QWle-g
+  * https://www.youtube.com/watch?v=ximj9QWle-g
 
 * https://github.com/siddhardhan23/gemini-pro-streamlit-chatbot
+
+</details>

@@ -1,6 +1,6 @@
 import streamlit as st
 import openai
-from config import Config
+from Streamlit_Pages.config import Config
 from helpers.llm_helper import chat, stream_parser
 import os
 

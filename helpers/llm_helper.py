@@ -4,7 +4,7 @@ https://www.youtube.com/@DevTechBytes
 """
 
 import ollama
-from config import Config
+from Streamlit_Pages.config import Config
 
 system_prompt = Config.SYSTEM_PROMPT
 
