@@ -13,5 +13,8 @@
     "@slidev/theme-seriph": "latest",
     "light-icons": "^1.0.12",
     "vue": "^3.4.31"
+  },
+  "devDependencies": {
+    "playwright-chromium": "^1.45.1"
   }
 }

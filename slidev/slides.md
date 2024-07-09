@@ -22,6 +22,7 @@ drawings:
 transition: slide-left
 # enable MDC Syntax: https://sli.dev/guide/syntax#mdc-syntax
 mdc: true
+download: true
 ---
 
 # Streamlit MultiChat
@@ -66,6 +67,59 @@ Streamlit can help to create a unified MultiChat app with Language Learning Mode
 ::right::
 
 <Toc v-click minDepth="1" maxDepth="2"></Toc>
+
+---
+
+# The Context of LLMs
+
+Clarifying AI/ML/Neuronal Networks. 
+
+There is really Math intensive stuff going on here:
+
+<div style="text-align: center;">
+
+$$
+\theta = \theta - \alpha \cdot \nabla_\theta J( \theta),
+$$
+</div> 
+
+
+But, we dont need to go into Math details. Just **keep in mind**:
+
+<div style="text-align: center;">
+
+```mermaid {scale: 0.45}
+mindmap
+  root((LLMs))
+    Transformers
+      Attention Mechanisms
+      ::icon(fa fa-eye)
+      Multi-Head Attention
+        BERT
+        GPT
+    Neural Networks
+      Layers
+      ::icon(fa fa-layer-group)
+      Activation Functions
+        ReLU
+        Sigmoid
+    Gradient Descent
+      Learning Rate
+      ::icon(fa fa-chart-line)
+      Convergence
+        Stochastic Gradient Descent
+        Batch Gradient Descent
+    Overfitting
+      Regularization
+      ::icon(fa fa-balance-scale)
+      Techniques
+        Dropout
+        Early Stopping
+```
+</div> 
+
+ML Resources - [The ML Map](https://scikit-learn.org/dev/machine_learning_map.html).
+
 
 ---
 transition: fade-out
@@ -118,7 +172,7 @@ level: 2
 
 # What's based on?
 
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/navigation.html)
+Three 3rd Party API's and Local LLMs with [Ollama](https://fossengineer.com/selfhosting-llms-ollama/)
 
 ## Supported LLMs
 
@@ -129,6 +183,50 @@ Hover on the bottom-left corner to see the navigation's controls panel, [learn m
 | <kbd>Groq API</kbd> | Fast Inference with Free Models |
 | <kbd>Ollama API</kbd> | Also local LLMs! |
 
+---
+
+## The AI App Architecture
+
+You can create diagrams / graphs from textual descriptions, directly in your Markdown.
+
+<div class="grid grid-cols-2 gap-5 pt-4 -mb-6">
+
+```mermaid {theme: 'neutral', scale: 0.8}
+graph TD
+A[Raw Text Data] --> B[Preprocessing]
+B --> C[Tokenization]
+C --> D[Model Training]
+D --> E[Trained Model]
+```
+
+
+```plantuml {scale: 0.9}
+@startuml
+
+actor User
+node "Streamlit App" {
+  User --> [Streamlit App]
+}
+
+cloud {
+  [OpenAI]
+  [Anthropic]
+  [Groq]
+  [Ollama]
+}
+
+[Streamlit App] --> [OpenAI]
+[Streamlit App] --> [Anthropic]
+[Streamlit App] --> [Groq]
+[Streamlit App] --> [Ollama]
+
+@enduml
+```
+
+</div>
+
+[Learn More](https://sli.dev/guide/syntax.html#diagrams)
+
 
 
 ---
@@ -136,11 +234,11 @@ layout: image-right
 image: https://cover.sli.dev
 ---
 
-# Code
+## Code
 
-Use code snippets and get the highlighting directly....
+No need to get scared, Streamlit makes it simple:
 
-```py {all|5|7|7-8|10|all} twoslash
+```py {all|1|3-4|6-7} twoslash
 import streamlit as st
 
 # Create a slider widget
@@ -150,7 +248,7 @@ slider_value = st.slider('Select a value:', 0, 10)
 st.write(f'You selected {slider_value}')
 ```
 
-<arrow v-click="[4, 5]" x1="350" y1="310" x2="195" y2="334" color="#953" width="2" arrowSize="1" />
+<arrow v-click="[1, 2]" x1="400" y1="150" x2="250" y2="165" color="#953" width="2" arrowSize="1" />
 
 
 
@@ -181,7 +279,7 @@ Notes can also sync with clicks
 -->
 
 ---
-level: 2
+level: 1
 ---
 
 # How it Works
@@ -241,28 +339,31 @@ for response in openai.ChatCompletion.create(
 
 ---
 
-# Components
+# The App's Modularity
 
 <div grid="~ cols-2 gap-4">
 <div>
 
-You can use Vue components directly inside your slides.
+Whenever a **new models appears**, adding its just about adding it in the config:
 
-We have provided a few built-in components like `<Tweet/>` and `<Youtube/>` that you can use directly. And adding your custom components is also super easy.
-
-```html
-<Counter :count="10" />
+```py
+model = st.selectbox(
+    "Select Model", 
+    ("claude-3.5-sonnet-20240620","claude-3-opus-20240229", "claude-3-sonnet-20240229")
+)
 ```
 
-<!-- ./components/Counter.vue -->
-<Counter :count="10" m="t-4" />
+And that's it, the app now allows to use the latest Anthropic Model
 
-Check out [the guides](https://sli.dev/builtin/components.html) for more.
+<!-- ./components/Counter.vue -->
+<!-- <Counter :count="10" m="t-4" />
+
+Check out [the guides](https://sli.dev/builtin/components.html) for more. -->
 
 </div>
 <div>
 
-We had very recent anouncements...
+And we had very recent anouncements...
 
 <Tweet id="1803790676988920098" scale="0.45" />
 
@@ -280,12 +381,15 @@ Also, HTML elements are valid:
 -->
 
 ---
+hideInToc: true
 class: px-20
 ---
 
 # Themes
 
-Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
+Slidev comes with powerful theming support.
+
+Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
 
 <div grid="~ cols-2 gap-2" m="t-2">
 
@@ -312,16 +416,16 @@ check out the [Awesome Themes Gallery](https://sli.dev/themes/gallery.html).
 
 ---
 
-# Clicks Animations
+# How to use Streamlit MultiChat
 
-You can add `v-click` to elements to add a click animation.
+This sounds interesting - How can I try the project?
 
 <div v-click>
 
-This shows up when you click the slide:
+To use it, you can use the Container Image that it is ready at **[ghcr](https://github.com/JAlcocerT/Streamlit-MultiChat/pkgs/container/streamlit-multichat)**:
 
-```html
-<div v-click>This shows up when you click the slide.</div>
+```sh
+podman pull ghcr.io/jalcocert/streamlit-multichat:latest
 ```
 
 </div>
@@ -330,221 +434,39 @@ This shows up when you click the slide:
 
 <v-click>
 
-The <span v-mark.red="3"><code>v-mark</code> directive</span>
-also allows you to add
-<span v-mark.circle.orange="4">inline marks</span>
-, powered by [Rough Notation](https://roughnotation.com/):
+The Streamlit Multichat needs the following `artifacts`:
 
-```html
-<span v-mark.underline.orange>inline markers</span>
-```
+* For 3rd party providers, <span v-mark.red="3"><code>Models API</code> endpoints</span>
+you need to run the Ollama server first.
+* To have the <span v-mark.red="3"><code>local LLMs</code> with Ollama</span>
+you need to run the Ollama server first.
+
+> <span v-mark.circle.orange="4">Docker/Podman</span> - Step by Step [Ollama Setup](https://fossengineer.com/selfhosting-llms-ollama/):
 
 </v-click>
 
 <div mt-20 v-click>
 
-[Learn More](https://sli.dev/guide/animations#click-animations)
+[Learn More](https://fossengineer.com/docker-alternatives-for-data-analytics/)
 
 </div>
 
----
-
-# Motions
-
-Motion animations are powered by [@vueuse/motion](https://motion.vueuse.org/), triggered by `v-motion` directive.
-
-```html
-<div
-  v-motion
-  :initial="{ x: -80 }"
-  :enter="{ x: 0 }"
-  :click-3="{ x: 80 }"
-  :leave="{ x: 1000 }"
->
-  Slidev
-</div>
-```
-
-<div class="w-60 relative">
-  <div class="relative w-40 h-40">
-    <img
-      v-motion
-      :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-square.png"
-      alt=""
-    />
-    <img
-      v-motion
-      :initial="{ y: 500, x: -100, scale: 2 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-circle.png"
-      alt=""
-    />
-    <img
-      v-motion
-      :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-triangle.png"
-      alt=""
-    />
-  </div>
-
-  <div
-    class="text-5xl absolute top-14 left-40 text-[#2B90B6] -z-1"
-    v-motion
-    :initial="{ x: -80, opacity: 0}"
-    :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
-    Slidev
-  </div>
-</div>
-
-<!-- vue script setup scripts can be directly used in markdown, and will only affects current page -->
-<script setup lang="ts">
-const final = {
-  x: 0,
-  y: 0,
-  rotate: 0,
-  scale: 1,
-  transition: {
-    type: 'spring',
-    damping: 10,
-    stiffness: 20,
-    mass: 2
-  }
-}
-</script>
-
-<div
-  v-motion
-  :initial="{ x:35, y: 30, opacity: 0}"
-  :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
-
-[Learn More](https://sli.dev/guide/animations.html#motion)
-
-</div>
-
----
-
-# LaTeX
-
-LaTeX is supported out-of-box. Powered by [KaTeX](https://katex.org/).
-
-<div h-3 />
-
-$$
-\theta = \theta - \alpha \cdot \nabla_\theta J( \theta),
-$$
-
-[Learn more](https://sli.dev/guide/syntax#latex)
-
----
-
-# Diagrams
-
-You can create diagrams / graphs from textual descriptions, directly in your Markdown.
-
-<div class="grid grid-cols-4 gap-5 pt-4 -mb-6">
-
-
-```mermaid {theme: 'neutral', scale: 0.8}
-graph TD
-A[Raw Text Data] --> B[Preprocessing]
-B --> C[Tokenization]
-C --> D[Model Training]
-D --> E[Trained Model]
-```
-
-```mermaid {scale: 0.3}
-mindmap
-  root((LLMs))
-    Transformers
-      Attention Mechanisms
-      ::icon(fa fa-eye)
-      Multi-Head Attention
-        BERT
-        GPT
-    Neural Networks
-      Layers
-      ::icon(fa fa-layer-group)
-      Activation Functions
-        ReLU
-        Sigmoid
-    Gradient Descent
-      Learning Rate
-      ::icon(fa fa-chart-line)
-      Convergence
-        Stochastic Gradient Descent
-        Batch Gradient Descent
-    Overfitting
-      Regularization
-      ::icon(fa fa-balance-scale)
-      Techniques
-        Dropout
-        Early Stopping
-```
-
-```plantuml {scale: 0.7}
-@startuml
-
-actor User
-node "Streamlit App" {
-  User --> [Streamlit App]
-}
-
-cloud {
-  [OpenAI]
-  [Anthropic]
-  [Groq]
-  [Ollama]
-}
-
-[Streamlit App] --> [OpenAI]
-[Streamlit App] --> [Anthropic]
-[Streamlit App] --> [Groq]
-[Streamlit App] --> [Ollama]
-
-@enduml
-```
-
-</div>
-
-[Learn More](https://sli.dev/guide/syntax.html#diagrams)
-
-# Monaco Editor
-
-Slidev provides built-in Monaco Editor support.
-
-Add `{monaco}` to the code block to turn it into an editor:
-
-```ts {monaco}
-import { ref } from 'vue'
-import { emptyArray } from './external'
-
-const arr = ref(emptyArray(10))
-```
-
-Use `{monaco-run}` to create an editor that can execute the code directly in the slide:
-
-```ts {monaco-run}
-import { version } from 'vue'
-import { emptyArray, sayHello } from './external'
-
-sayHello()
-console.log(`vue ${version}`)
-console.log(emptyArray<number>(10).reduce(fib => [...fib, fib.at(-1)! + fib.at(-2)!], [1, 1]))
-```
 
 ---
 layout: center
 class: text-center
 ---
 
-# Learn More
+# Thanks for your Time
 
-[Documentation](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/showcases.html)
+Q&A Session
+
+[Documentation](https://fossengineer.com/create-streamlit-chatgpt/) · [GitHub](https://github.com/JAlcocerT/Streamlit-MultiChat) · [Showcase](https://yt.iotechcrafts.com)
 
 <PoweredBySlidev mt-10 />
+
+```sh
+npm init slidev
+npm i -D playwright-chromium
+slidev build --download
+```
