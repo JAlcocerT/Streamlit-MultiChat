@@ -1,3 +1,8 @@
+
+* [SliDev Guide](https://fossengineer.com/how-to-use-slidev/)
+
+---
+
 # Welcome to [Slidev](https://github.com/slidevjs/slidev)!
 
 To start the slide show:
@@ -20,4 +25,10 @@ Learn more about Slidev on [documentations](https://sli.dev/).
 npm run build
 # npm install -g serve
 # serve -s dist
+```
+
+```sh
+slidev export --format pptx
+#slidev export --format png
+#slidev export --format pdf
 ```
