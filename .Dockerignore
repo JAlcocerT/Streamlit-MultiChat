@@ -7,6 +7,6 @@ docs/
 
 multichat/
 slidev/
-Z_Tests/
+Z_Tests/Auth_sqlite/data.db
 
 streamlit-multichat.png

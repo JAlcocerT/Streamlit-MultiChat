@@ -6,5 +6,8 @@ __pycache__/
 
 Z_Tests/.env
 Z_Tests/test/
+Z_Tests/Stripe/
+Z_Tests/Auth_sqlite/data.db
 
 Taipy/
+
