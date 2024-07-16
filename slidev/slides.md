@@ -468,5 +468,7 @@ Q&A Session
 ```sh
 npm init slidev
 npm i -D playwright-chromium
+
+slidev build --base /Streamlit-Multichat --download
 slidev build --download
 ```
