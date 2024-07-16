@@ -236,7 +236,7 @@ image: https://cover.sli.dev
 
 ## Code
 
-No need to get scared, Streamlit makes it simple:
+No need to get scared, **Streamlit** makes it simple:
 
 ```py {all|1|3-4|6-7} twoslash
 import streamlit as st
@@ -249,6 +249,9 @@ st.write(f'You selected {slider_value}')
 ```
 
 <arrow v-click="[1, 2]" x1="400" y1="150" x2="250" y2="165" color="#953" width="2" arrowSize="1" />
+
+* Install [Streamlit with Python](https://pypi.org/project/streamlit/) - PyPi
+  * Just a **P**ackage **I**ndex for 🐍
 
 
 
@@ -284,9 +287,9 @@ level: 1
 
 # How it Works
 
-Powered by [shiki-magic-move](https://shiki-magic-move.netlify.app/), Slidev supports animations across multiple code snippets.
+It's all about proper API calls with Python packages!
 
-Add multiple code blocks and wrap them with <code>````md magic-move</code> (four backticks) to enable the magic move. For example:
+The App checks first if we have provided the **credentials first** for the selected API with this kind of conditions:
 
 ````md magic-move {lines: true}
 ```py {*|2|*}
@@ -317,7 +320,7 @@ temperature = st.slider(
     'Select temperature for the model:',
     min_value=0.0,
     max_value=1.0,
-    value=0.7,
+    value=0.7, #BE CREATIVE! versus BE STRICT TO THE BOOK!
     step=0.01
 )
 ```
@@ -353,7 +356,7 @@ model = st.selectbox(
 )
 ```
 
-And that's it, the app now allows to use the latest Anthropic Model
+And that's it, the app now allows to use the **latest Anthropic Model**
 
 <!-- ./components/Counter.vue -->
 <!-- <Counter :count="10" m="t-4" />
@@ -363,7 +366,7 @@ Check out [the guides](https://sli.dev/builtin/components.html) for more. -->
 </div>
 <div>
 
-And we had very recent anouncements...
+Sample of very recent anouncements...
 
 <Tweet id="1803790676988920098" scale="0.45" />
 
@@ -422,11 +425,13 @@ This sounds interesting - How can I try the project?
 
 <div v-click>
 
-To use it, you can use the Container Image that it is ready at **[ghcr](https://github.com/JAlcocerT/Streamlit-MultiChat/pkgs/container/streamlit-multichat)**:
+To use it, you can use the **Container Image** that it is ready at **[ghcr](https://github.com/JAlcocerT/Streamlit-MultiChat/pkgs/container/streamlit-multichat)**:
 
 ```sh
 podman pull ghcr.io/jalcocert/streamlit-multichat:latest
 ```
+
+* The container is built with [Github Actions](https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/.github/workflows/Streamlit_GHA_MultiArch.yml), btw!
 
 </div>
 
@@ -434,10 +439,19 @@ podman pull ghcr.io/jalcocert/streamlit-multichat:latest
 
 <v-click>
 
-The Streamlit Multichat needs the following `artifacts`:
+The Streamlit Multichat needs the following **artifacts to run**:
 
 * For 3rd party providers, <span v-mark.red="3"><code>Models API</code> endpoints</span>
 you need to run the Ollama server first.
+  * The magic happens as `.streamlit/secrets.toml`
+
+```toml
+# .streamlit/secrets.toml
+OPENAI_API_KEY = "your_openai_api_key_here"
+GROQ_API_KEY = "your_groq_api_key_here"
+ANTHROPIC_API_KEY = "your_anthropic_api_key_here"
+```
+
 * To have the <span v-mark.red="3"><code>local LLMs</code> with Ollama</span>
 you need to run the Ollama server first.
 
@@ -455,13 +469,14 @@ you need to run the Ollama server first.
 ---
 layout: center
 class: text-center
+hideInToc: true
 ---
 
 # Thanks for your Time
 
 Q&A Session
 
-[Documentation](https://fossengineer.com/create-streamlit-chatgpt/) · [GitHub](https://github.com/JAlcocerT/Streamlit-MultiChat) · [Showcase](https://yt.iotechcrafts.com)
+[Documentation](https://fossengineer.com/create-streamlit-chatgpt/) · [GitHub](https://github.com/JAlcocerT/Streamlit-MultiChat) · [Showcase](https://chat.iotechcrafts.com/) · [PPT Guide](https://fossengineer.com/how-to-use-slidev/)
 
 <PoweredBySlidev mt-10 />
 
@@ -470,5 +485,5 @@ npm init slidev
 npm i -D playwright-chromium
 
 slidev build --base /Streamlit-Multichat --download
-slidev build --download
+#slidev build --download
 ```
