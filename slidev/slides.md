@@ -3,13 +3,16 @@
 theme: seriph
 # random image from a curated Unsplash collection by Anthony
 # like them? see https://unsplash.com/collections/94734566/slidev
-background: https://cover.sli.dev
+background: https://cover.sli.dev #back1.png #https://cover.sli.dev
 # some information about your slides (markdown enabled)
 title: Streamlit Multichat
+titleTemplate: ' - JAT'
 info: |
   ## Setup your ChatBot
+  With 🐍
 # apply unocss classes to the current slide
 class: text-left
+author: JAlcocerT
 # https://sli.dev/custom/highlighters.html
 highlighter: shiki
 # https://sli.dev/guide/drawing
@@ -20,7 +23,7 @@ transition: slide-left
 # enable MDC Syntax: https://sli.dev/guide/syntax#mdc-syntax
 mdc: true
 download: true
-# favicon, can be a local file path or URL
+# favicon, can be a local file path or URL # https://realfavicongenerator.net/
 favicon: 'favicon.ico' #'./JAT.svg' #'https://cdn.jsdelivr.net/gh/slidevjs/slidev/assets/favicon.png
 ---
 
@@ -52,6 +55,7 @@ The last comment block of each slide will be treated as slide notes. It will be 
 ---
 layout: two-cols
 layoutClass: gap-16
+background: https://cover.sli.dev <!-- /back1.png -->
 ---
 
 # Why Streamlit for a MultiChat App?
@@ -234,12 +238,18 @@ cloud {
 
 ---
 layout: image-right
-image: https://cover.sli.dev
+image: https://user-images.githubusercontent.com/7164864/217936487-1017784e-68ec-4e0d-a7f6-6b97525ddf88.gif
+backgroundSize: 70%
 ---
+<!-- image place it as background -->
+<!-- https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/streamlit-multichat.png?raw=true  -->
+<!-- back1.png -->
+<!-- #https://cover.sli.dev -->
 
 ## Code
 
-No need to get scared, **Streamlit** makes it simple:
+No need to get scared
+* **Streamlit** makes it simple:
 
 ```py {all|1|3-4|6-7} twoslash
 import streamlit as st
@@ -458,7 +468,7 @@ ANTHROPIC_API_KEY = "your_anthropic_api_key_here"
 * To have the <span v-mark.red="3"><code>local LLMs</code> with Ollama</span>
 you need to run the Ollama server first.
 
-> <span v-mark.circle.orange="4">Docker/Podman</span> - Step by Step [Ollama Setup](https://fossengineer.com/selfhosting-llms-ollama/):
+
 
 </v-click>
 
@@ -468,6 +478,26 @@ you need to run the Ollama server first.
 
 </div>
 
+
+---
+layout: two-cols
+---
+
+## Third Party API's
+
+* Register and accept their conditions -> API access
+
+::right::
+
+## Local LLMs with Ollama
+
+<Youtube id="jl9bfPsBBcM" width="300" height="170" />
+
+As simple as that.
+
+* https://ollama.com/library
+
+> <span v-mark.circle.orange="4">Docker/Podman</span> - Step by Step [Ollama Setup](https://fossengineer.com/selfhosting-llms-ollama/):
 
 ---
 layout: center
