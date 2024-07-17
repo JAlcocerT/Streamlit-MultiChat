@@ -5,12 +5,9 @@ theme: seriph
 # like them? see https://unsplash.com/collections/94734566/slidev
 background: https://cover.sli.dev
 # some information about your slides (markdown enabled)
-title: Streamlit Multichat PPT
+title: Streamlit Multichat
 info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
-
-  Learn more at [Sli.dev](https://sli.dev)
+  ## Setup your ChatBot
 # apply unocss classes to the current slide
 class: text-left
 # https://sli.dev/custom/highlighters.html
@@ -23,6 +20,8 @@ transition: slide-left
 # enable MDC Syntax: https://sli.dev/guide/syntax#mdc-syntax
 mdc: true
 download: true
+# favicon, can be a local file path or URL
+favicon: 'favicon.ico' #'./JAT.svg' #'https://cdn.jsdelivr.net/gh/slidevjs/slidev/assets/favicon.png
 ---
 
 # Streamlit MultiChat
@@ -174,14 +173,18 @@ level: 2
 
 Three 3rd Party API's and Local LLMs with [Ollama](https://fossengineer.com/selfhosting-llms-ollama/)
 
+* Streamlit provides the UI + Call the selected API as per user request
 ## Supported LLMs
 
 |     |     |
 | --- | --- |
 | <kbd>OpenAI API</kbd> | Most Popular Propietary LLMs (ATM) |
-| <kbd>Anthropic API</kbd>  | The challenger of the Throne |
-| <kbd>Groq API</kbd> | Fast Inference with Free Models |
+| <kbd>Anthropic API</kbd>  | The challenger of the LLM's Throne |
+| <kbd>Groq API</kbd> | Fast Inference with Free Models (Ex: Llama2-70B) |
 | <kbd>Ollama API</kbd> | Also local LLMs! |
+
+* LLM's Leaderboard - [Arena to fight!](https://chat.lmsys.org/?leaderboard)
+  * Crowdsourced, randomized LLM battle platform.
 
 ---
 
