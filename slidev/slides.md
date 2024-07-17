@@ -6,7 +6,7 @@ theme: seriph
 background: https://cover.sli.dev #back1.png #https://cover.sli.dev
 # some information about your slides (markdown enabled)
 title: Streamlit Multichat
-titleTemplate: ' - JAT'
+titleTemplate: 'Streamlit MultiChat - JAT'
 info: |
   ## Setup your ChatBot
   With 🐍
@@ -25,6 +25,7 @@ mdc: true
 download: true
 # favicon, can be a local file path or URL # https://realfavicongenerator.net/
 favicon: 'favicon.ico' #'./JAT.svg' #'https://cdn.jsdelivr.net/gh/slidevjs/slidev/assets/favicon.png
+#layout: intro
 ---
 
 # Streamlit MultiChat
@@ -33,7 +34,13 @@ Chat with multiple LLMs from one App.
 
 <div class="pt-12">
   <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
-    Press Space and Check how it's built <carbon:arrow-right class="inline"/>
+    Press Space and Check HOW it's built <carbon:arrow-right class="inline"/>
+  </span>
+</div>
+
+<div class="pt-10">
+  <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
+    J.Alcocer T.
   </span>
 </div>
 
@@ -63,13 +70,115 @@ background: https://cover.sli.dev <!-- /back1.png -->
 Streamlit can help to create a unified MultiChat app with Language Learning Models (LLMs)
 
 - 🔄 **Unified Experience** - Select different LLM providers from one place, without switching between platforms.
-- 👥 **Multi-User Support** - Handle multiple users and conversations at once.
-- 🛠 **Customizable** - Easily adapt the app to different learning methods and requirements.
+- 🛠 **Customizable** - Easily adapt the app to different LLMs and requirements.
 - 🌐 **Web-Based** - Access your MultiChat app from anywhere, on any device.
 
 ::right::
 
 <Toc v-click minDepth="1" maxDepth="2"></Toc>
+
+
+---
+transition: fade-out
+---
+
+## What is Streamlit?
+
+Streamlit is a fast, user-friendly tool to create custom web apps for machine learning and data science, offering the following features:
+
+- 📝 **Code-based** - Create web apps using Python scripts, **focusing on data and models first**.
+- 🎨 **Customizable** - Easily design your app's layout and appearance.
+- 🧑‍💻 **Developer Friendly** - Built for developers with features like hot-reloading and modular code.
+- 🤹 **Interactive** - Easily add widgets like sliders, dropdowns, and buttons to interact with your data.
+- 📊 **Data-Ready** - Built-in support for displaying data frames, charts, and other visualizations.
+- 🚀 **Fast Deployment** - One-click deployment to share your apps with the world.
+
+
+
+<br>
+<br>
+
+Read more about [Why Streamlit?](https://streamlit.io/why-streamlit)
+
+
+<!--
+You can have `style` tag in markdown to override the style for the current page.
+Learn more: https://sli.dev/guide/syntax#embedded-styles
+-->
+
+<style>
+h1 {
+  background-color: #2B90B6;
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
+
+<!--
+Here is another comment.
+-->
+
+
+---
+layout: image-right
+image: https://user-images.githubusercontent.com/7164864/217936487-1017784e-68ec-4e0d-a7f6-6b97525ddf88.gif
+backgroundSize: 70%
+---
+<!-- image place it as background -->
+<!-- https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/streamlit-multichat.png?raw=true  -->
+<!-- back1.png -->
+<!-- #https://cover.sli.dev -->
+
+## The Code
+
+No need to get scared - **Streamlit** makes it simple
+* Install [Streamlit with Python](https://pypi.org/project/streamlit/) - PyPi
+  * Just a **P**ackage **I**ndex for 🐍
+
+```py {all|1|3-4|6-7} twoslash
+import streamlit as st
+
+# Create a slider widget
+slider_value = st.slider('Select a value:', 0, 10)
+
+# Display the selected value
+st.write(f'You selected {slider_value}')
+```
+
+<arrow v-click="[1, 2]" x1="500" y1="150" x2="250" y2="245" color="#953" width="2" arrowSize="1" />
+
+* 🤖  LLMs & chatbot apps
+* 🏦  Finance & business apps
+* 🗺  Geography apps...
+
+
+
+---
+transition: slide-up
+level: 2
+---
+
+# What's 'behind' Streamlit UI?
+
+Three 3rd Party API's and Local LLMs with [Ollama](https://fossengineer.com/selfhosting-llms-ollama/)
+
+* Streamlit provides the UI + Call the selected API as per user request
+
+## Supported LLMs
+
+|     |     |
+| --- | --- |
+| <kbd>OpenAI API</kbd> | Most Popular Propietary LLMs (ATM) |
+| <kbd>Anthropic API</kbd>  | The challenger of the LLM's Throne |
+| <kbd>Groq API</kbd> | Fast Inference with Free Models (Ex: Llama2-70B) |
+| <kbd>Ollama API</kbd> | Also local LLMs! |
+
+* LLM's Leaderboard - [Arena to fight!](https://chat.lmsys.org/?leaderboard)
+  * Crowdsourced, randomized LLM battle platform.
 
 ---
 
@@ -124,79 +233,16 @@ mindmap
 ML Resources - [The ML Map](https://scikit-learn.org/dev/machine_learning_map.html).
 
 
----
-transition: fade-out
----
-
-# What is Streamlit?
-
-Streamlit is a fast, user-friendly tool to create custom web apps for machine learning and data science, offering the following features:
-
-- 📝 **Code-based** - Create web apps using Python scripts, focusing on data and models first.
-- 🎨 **Customizable** - Easily design your app's layout and appearance.
-- 🧑‍💻 **Developer Friendly** - Built for developers with features like hot-reloading and modular code.
-- 🤹 **Interactive** - Easily add widgets like sliders, dropdowns, and buttons to interact with your data.
-- 📊 **Data-Ready** - Built-in support for displaying data frames, charts, and other visualizations.
-- 🚀 **Fast Deployment** - One-click deployment to share your apps with the world.
-
-
-
-<br>
-<br>
-
-Read more about [Why Streamlit?](https://streamlit.io/why-streamlit)
-
-
-<!--
-You can have `style` tag in markdown to override the style for the current page.
-Learn more: https://sli.dev/guide/syntax#embedded-styles
--->
-
-<style>
-h1 {
-  background-color: #2B90B6;
-  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-}
-</style>
-
-<!--
-Here is another comment.
--->
-
----
-transition: slide-up
-level: 2
----
-
-# What's based on?
-
-Three 3rd Party API's and Local LLMs with [Ollama](https://fossengineer.com/selfhosting-llms-ollama/)
-
-* Streamlit provides the UI + Call the selected API as per user request
-## Supported LLMs
-
-|     |     |
-| --- | --- |
-| <kbd>OpenAI API</kbd> | Most Popular Propietary LLMs (ATM) |
-| <kbd>Anthropic API</kbd>  | The challenger of the LLM's Throne |
-| <kbd>Groq API</kbd> | Fast Inference with Free Models (Ex: Llama2-70B) |
-| <kbd>Ollama API</kbd> | Also local LLMs! |
-
-* LLM's Leaderboard - [Arena to fight!](https://chat.lmsys.org/?leaderboard)
-  * Crowdsourced, randomized LLM battle platform.
 
 ---
 
 ## The AI App Architecture
 
-You can create diagrams / graphs from textual descriptions, directly in your Markdown.
+This is what we are about to see in action
 
 <div class="grid grid-cols-2 gap-5 pt-4 -mb-6">
+
+
 
 ```mermaid {theme: 'neutral', scale: 0.8}
 graph TD
@@ -204,8 +250,8 @@ A[Raw Text Data] --> B[Preprocessing]
 B --> C[Tokenization]
 C --> D[Model Training]
 D --> E[Trained Model]
-```
 
+```
 
 ```plantuml {scale: 0.9}
 @startuml
@@ -232,47 +278,14 @@ cloud {
 
 </div>
 
-[Learn More](https://sli.dev/guide/syntax.html#diagrams)
-
-
-
----
-layout: image-right
-image: https://user-images.githubusercontent.com/7164864/217936487-1017784e-68ec-4e0d-a7f6-6b97525ddf88.gif
-backgroundSize: 70%
----
-<!-- image place it as background -->
-<!-- https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/streamlit-multichat.png?raw=true  -->
-<!-- back1.png -->
-<!-- #https://cover.sli.dev -->
-
-## Code
-
-No need to get scared
-* **Streamlit** makes it simple:
-
-```py {all|1|3-4|6-7} twoslash
-import streamlit as st
-
-# Create a slider widget
-slider_value = st.slider('Select a value:', 0, 10)
-
-# Display the selected value
-st.write(f'You selected {slider_value}')
-```
-
-<arrow v-click="[1, 2]" x1="400" y1="150" x2="250" y2="165" color="#953" width="2" arrowSize="1" />
-
-* Install [Streamlit with Python](https://pypi.org/project/streamlit/) - PyPi
-  * Just a **P**ackage **I**ndex for 🐍
-
+We are using streamlit to 'connect' with trained models
 
 
 <!-- Footer -->
-[^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
+<!-- [^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting) -->
 
 <!-- Inline style -->
-<style>
+<!--<style>
 .footnotes-sep {
   @apply mt-5 opacity-10;
 }
@@ -282,7 +295,7 @@ st.write(f'You selected {slider_value}')
 .footnote-backref {
   display: none;
 }
-</style>
+ </style> -->
 
 <!--
 Notes can also sync with clicks
@@ -396,39 +409,6 @@ Also, HTML elements are valid:
 </div>
 -->
 
----
-hideInToc: true
-class: px-20
----
-
-# Themes
-
-Slidev comes with powerful theming support.
-
-Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
-
-<div grid="~ cols-2 gap-2" m="t-2">
-
-```yaml
----
-theme: default
----
-```
-
-```yaml
----
-theme: seriph
----
-```
-
-<img border="rounded" src="https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/streamlit-multichat.png?raw=true" alt="">
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true" alt="">
-
-</div>
-
-Read more about [How to use a theme](https://sli.dev/themes/use.html) and
-check out the [Awesome Themes Gallery](https://sli.dev/themes/gallery.html).
 
 ---
 
@@ -478,6 +458,39 @@ you need to run the Ollama server first.
 
 </div>
 
+---
+hideInToc: true
+class: px-20
+---
+
+# Deploying the App
+
+Let's use the container image to deploy it.
+
+Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
+
+<div grid="~ cols-2 gap-2" m="t-2">
+
+```yaml
+---
+theme: default
+---
+```
+
+```yaml
+---
+theme: seriph
+---
+```
+
+<img border="rounded" src="https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/streamlit-multichat.png?raw=true" alt="">
+
+<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true" alt="">
+
+</div>
+
+Use it together with [Cloudflare Tunnels](https://fossengineer.com/selfhosting-cloudflared-tunnel-docker/) to expose it to the internet.
+
 
 ---
 layout: two-cols
@@ -487,17 +500,22 @@ layout: two-cols
 
 * Register and accept their conditions -> API access
 
+* Where exactly?
+  * Anthropic - https://console.anthropic.com/settings/keys
+  * OpenAI - https://platform.openai.com/api-keys
+  * GROQ - https://console.groq.com/keys
+
 ::right::
 
 ## Local LLMs with Ollama
 
-<Youtube id="jl9bfPsBBcM" width="300" height="170" />
+<Youtube id="jl9bfPsBBcM" width="400" height="270" />
 
 As simple as that.
 
 * https://ollama.com/library
 
-> <span v-mark.circle.orange="4">Docker/Podman</span> - Step by Step [Ollama Setup](https://fossengineer.com/selfhosting-llms-ollama/):
+> <span v-mark.circle.orange="1">Docker/Podman</span> - Step by Step [Ollama Setup](https://fossengineer.com/selfhosting-llms-ollama/):
 
 ---
 layout: center
