@@ -182,7 +182,7 @@ Three 3rd Party API's and Local LLMs with [Ollama](https://fossengineer.com/self
 
 ---
 layout: image-right
-image: map.png
+image: https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/slidev/map.png?raw=true <!-- map.png -->
 backgroundSize: 70%
 ---
 
@@ -238,7 +238,7 @@ ML Resources - [The ML Map](https://scikit-learn.org/dev/machine_learning_map.ht
 
 ---
 layout: image-right
-image: predictions.png
+image: https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/slidev/predictions.png?raw=true
 backgroundSize: 70%
 ---
 
@@ -257,7 +257,7 @@ Be aware of:
 
 ---
 layout: image-left
-image: bias-variance.png
+image: https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/slidev/bias-variance.png?raw=true <!--bias-variance.png -->
 backgroundSize: 70%
 ---
 
