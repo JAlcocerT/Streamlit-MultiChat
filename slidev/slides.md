@@ -524,9 +524,6 @@ As simple as that.
 > <span v-mark.circle.orange="1">Docker/Podman</span> - Step by Step [Ollama Setup](https://fossengineer.com/selfhosting-llms-ollama/)
 
 ---
-<!-- hideInToc: true -->
-class: px-20
----
 
 ## Deploying the App
 
@@ -567,7 +564,7 @@ Demo Time + Q&A Session
 
 [Documentation](https://fossengineer.com/create-streamlit-chatgpt/) · [GitHub](https://github.com/JAlcocerT/Streamlit-MultiChat) · [Showcase](https://chat.iotechcrafts.com/) · [PPT Guide](https://fossengineer.com/how-to-use-slidev/)
 
-<!-- <PoweredBySlidev mt-5 />
+<PoweredBySlidev mt-5 />
 
 ```sh
 npm init slidev
@@ -575,4 +572,4 @@ npm i -D playwright-chromium
 
 slidev build --base /Streamlit-Multichat --download
 #slidev build --download
-``` -->
+```
