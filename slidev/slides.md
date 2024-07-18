@@ -34,7 +34,7 @@ Chat with multiple LLMs from one App.
 
 <div class="pt-12">
   <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
-    Press Space and Check HOW it's built <carbon:arrow-right class="inline"/>
+    Let's Check HOW it's built <carbon:arrow-right class="inline"/>
   </span>
 </div>
 
@@ -181,6 +181,10 @@ Three 3rd Party API's and Local LLMs with [Ollama](https://fossengineer.com/self
   * Crowdsourced, randomized LLM battle platform.
 
 ---
+layout: image-right
+image: map.png
+backgroundSize: 70%
+---
 
 # The Context of LLMs
 
@@ -196,7 +200,7 @@ $$
 </div> 
 
 
-But, we dont need to go into Math details. Just **keep in mind**:
+Just **keep in mind**:
 
 <div style="text-align: center;">
 
@@ -232,6 +236,40 @@ mindmap
 
 ML Resources - [The ML Map](https://scikit-learn.org/dev/machine_learning_map.html).
 
+---
+layout: image-right
+image: predictions.png
+backgroundSize: 70%
+---
+
+## About Predictions
+
+In any prediction, both noise and bias contributes to the final error.
+
+Making good predictions is not the same as having a good judgment algorithm / model. 
+
+> Correlation does not imply causation.
+
+Be aware of: 
+* Known knowns
+* Known unknowns
+* Unknown unknowns – What could we be ignoring?
+
+---
+layout: image-left
+image: bias-variance.png
+backgroundSize: 70%
+---
+
+## Bias Variance Trade-Off
+
+Bias is a systematic error that leads to an incorrect estimate of effect or association. Produced by shortcuts in judgment / simple models.
+
+Variance (noise) is the statistical variability of scores caused by the influence of variables other than the independent variable.
+
+* The bias–variance trade-off is the property of a model that the variance of the parameter estimated across samples can be reduced by increasing the bias in the estimated parameters.
+
+* There is a conflict in trying to simultaneously minimize these two sources of error and this prevent algorithms from generalizing perfectly on unseen data.
 
 
 ---
@@ -353,7 +391,7 @@ temperature = st.slider(
 
 Non-code blocks are ignored. This is Ignored!
 
-```vue
+```py
 for response in openai.ChatCompletion.create(
                 model=model_choice,
                 messages=[{"role": m["role"], "content": m["content"]}
@@ -366,9 +404,10 @@ for response in openai.ChatCompletion.create(
 ```
 ````
 
+* With API's, we will normally pay on demand for the use of it
 ---
 
-# The App's Modularity
+## The App's Modularity
 
 <div grid="~ cols-2 gap-4">
 <div>
@@ -458,39 +497,6 @@ you need to run the Ollama server first.
 
 </div>
 
----
-hideInToc: true
-class: px-20
----
-
-# Deploying the App
-
-Let's use the container image to deploy it.
-
-Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
-
-<div grid="~ cols-2 gap-2" m="t-2">
-
-```yaml
----
-theme: default
----
-```
-
-```yaml
----
-theme: seriph
----
-```
-
-<img border="rounded" src="https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/streamlit-multichat.png?raw=true" alt="">
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true" alt="">
-
-</div>
-
-Use it together with [Cloudflare Tunnels](https://fossengineer.com/selfhosting-cloudflared-tunnel-docker/) to expose it to the internet.
-
 
 ---
 layout: two-cols
@@ -498,7 +504,7 @@ layout: two-cols
 
 ## Third Party API's
 
-* Register and accept their conditions -> API access
+* Register and accept their conditions -> **API access**
 
 * Where exactly?
   * Anthropic - https://console.anthropic.com/settings/keys
@@ -515,7 +521,39 @@ As simple as that.
 
 * https://ollama.com/library
 
-> <span v-mark.circle.orange="1">Docker/Podman</span> - Step by Step [Ollama Setup](https://fossengineer.com/selfhosting-llms-ollama/):
+> <span v-mark.circle.orange="1">Docker/Podman</span> - Step by Step [Ollama Setup](https://fossengineer.com/selfhosting-llms-ollama/)
+
+---
+<!-- hideInToc: true -->
+class: px-20
+---
+
+## Deploying the App
+
+Let's use the container image to deploy it.
+
+Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
+
+<div grid="~ cols-2 gap-2" m="t-2">
+
+```sh
+sudo podman run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
+
+```
+
+```sh
+podman run -p 8501:8501 -v ai_streamlit_multichat:/app --name streamlitmultichat streamlitmultichat:latest /bin/sh -c "cd /app && streamlit run Z_multichat.py"
+```
+
+<img border="rounded" src="https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/slidev/podman.png?raw=true" alt="">
+<img border="rounded" src="https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/slidev/deploy_portainer.png?raw=true" alt="">
+
+
+
+</div>
+
+Use it together with [Cloudflare Tunnels](https://fossengineer.com/selfhosting-cloudflared-tunnel-docker/) to expose it to the internet.
+
 
 ---
 layout: center
@@ -525,11 +563,11 @@ hideInToc: true
 
 # Thanks for your Time
 
-Q&A Session
+Demo Time + Q&A Session
 
 [Documentation](https://fossengineer.com/create-streamlit-chatgpt/) · [GitHub](https://github.com/JAlcocerT/Streamlit-MultiChat) · [Showcase](https://chat.iotechcrafts.com/) · [PPT Guide](https://fossengineer.com/how-to-use-slidev/)
 
-<PoweredBySlidev mt-10 />
+<!-- <PoweredBySlidev mt-5 />
 
 ```sh
 npm init slidev
@@ -537,4 +575,4 @@ npm i -D playwright-chromium
 
 slidev build --base /Streamlit-Multichat --download
 #slidev build --download
-```
+``` -->
