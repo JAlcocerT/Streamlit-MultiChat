@@ -19,7 +19,7 @@ def page_three():
 
         model_choice = st.selectbox(
             'Choose the model:',
-            ['gpt-3.5-turbo', 'gpt-4-turbo-preview', 'gpt-4o'],
+            ['gpt-3.5-turbo', 'gpt-4-turbo-preview', 'gpt-4o', 'gpt-4o-mini'],
             index=0
         )
 
