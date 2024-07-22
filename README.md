@@ -20,6 +20,14 @@ Use **many large language models**: OpenAI / Anthropic / Open / Local LLM's with
   </a>
 </div>
 
+## Features
+
+* LLM Support
+  * Ollama
+  * OpenAI - GPT 3.5 / GPT4 / GPT4o / GPT4o-mini
+  * Anthropic - Claude 3 (Opus / Sonnet) / Claude 3.5
+  * Groq API
+
 ## Getting Started 
 
 <details>
