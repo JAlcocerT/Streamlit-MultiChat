@@ -11,7 +11,11 @@
 [![GitHub release](https://img.shields.io/github/release/xmrig/xmrig-proxy/all.svg)](https://github.com/xmrig/xmrig-proxy/releases)
 [![GitHub Release Date](https://img.shields.io/github/release-date-pre/xmrig/xmrig-proxy.svg)](https://github.com/xmrig/xmrig-proxy/releases)
 
-Clone the repository and use the Docker-Compose with your credentials:
+Clone the repository and use the **Docker-Compose with your credentials**:
+
+* https://console.anthropic.com/workbench/
+* https://console.groq.com/keys
+* https://platform.openai.com/api-keys
 
 ```sh
 docker pull ghcr.io/jalcocert/streamlit-multichat:latest

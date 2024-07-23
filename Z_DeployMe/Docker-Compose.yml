@@ -15,10 +15,20 @@ services:
       streamlit run Z_multichat.py"
     ports:
       - "8501:8501"
+    restart: always
+    networks:
+      - cloudflare_tunnel
+      # - nginx_default   
+    #restart: always   
+
+# networks:
+#   cloudflare_tunnel:
+#     external: true
+  # nginx_default:
+  #   external: true
 
 volumes:
   ai_streamlit_multichat:
-
 
 #docker run -p 8501:8501 -v ai_streamlit_multichat:/app --name streamlitmultichat streamlitmultichat:latest /bin/sh -c "cd /app && streamlit run streamlit-multichat.py"
 #podman run -p .....
