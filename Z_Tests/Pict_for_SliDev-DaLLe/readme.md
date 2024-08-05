@@ -1,9 +1,11 @@
 * https://platform.openai.com/docs/guides/images/usage?context=python
 
 ```sh
-export OPENAI_API_KEY=your-api-key-here
-set OPENAI_API_KEY="your-api-key-here"
+export OPENAI_API_KEY=your-api-key-here #linux/mac
+set OPENAI_API_KEY="your-api-key-here" #windows
 ```
+
+> You need to do similarly for the other API's: GROQ_API_KEY, ANTHROPIC_API_KEY
 
 * Get it from the server with:
 

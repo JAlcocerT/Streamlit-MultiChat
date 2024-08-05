@@ -1,5 +1,9 @@
 multichat/
+*_venv/
+
 .streamlit/secrets.toml
+
+
 
 helpers/__pycache__/*
 __pycache__/
