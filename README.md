@@ -38,10 +38,10 @@ Try the Project quickly with [Python Venv's](https://fossengineer.com/python-dep
 
 ```sh
 git clone https://github.com/JAlcocerT/Streamlit-MultiChat
-python -m venv multichat #create the venv
+python -m venv multichat_venv #create the venv
 
-multichat\Scripts\activate #activate venv (windows)
-source multichat/bin/activate #(linux)
+multichat_venv\Scripts\activate #activate venv (windows)
+source multichat_venv/bin/activate #(linux)
 ```
 
 ```sh
@@ -53,9 +53,9 @@ streamlit run Z_multichat.py
 * Prepare the **API Keys** in any of:
     * .streamlit/secrets.toml
     * As Environment Variables
-        * Linux - export OPENAI_API_KEY="YOUR_API_KEY"
-        * CMD - set OPENAI_API_KEY=YOUR_API_KEY
-        * PS - $env:OPENAI_API_KEY="YOUR_API_KEY"
+        * Linux - `export OPENAI_API_KEY="YOUR_API_KEY"`
+        * CMD - `set OPENAI_API_KEY=YOUR_API_KEY`
+        * PS - `$env:OPENAI_API_KEY="YOUR_API_KEY"`
         * In the [Docker-Compose](https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_DeployMe)
     * Through the Streamlit UI
 </details>
