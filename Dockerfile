@@ -20,4 +20,11 @@ COPY . ./
 # Install production dependencies.
 RUN pip install -r requirements.txt
 
+# For Scrapegraph
+RUN playwright install-deps \
+    && playwright install
+
 EXPOSE 8501
+
+###podman build -t st_multichat_v1_1 .
+#docker build -t st_multichat_v1_1a .

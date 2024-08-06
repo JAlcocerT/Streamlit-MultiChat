@@ -3,9 +3,9 @@ import os
 import json
 from scrapegraphai.graphs import SmartScraperGraph
 
-def run_smart_scraper():
+def page_five():
     # Streamlit page configuration
-    st.set_page_config(page_title="Smart Scraper", layout="wide")
+    #st.set_page_config(page_title="Smart Scraper", layout="wide")
 
     # Fetch environment variables
     api_key = os.getenv('MODEL_API_KEY', 'default_api_key')
