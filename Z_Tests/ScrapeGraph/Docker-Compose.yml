@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  my_python_scrapeg:
+    image: scrapegraph_stream #python:3.10
+    container_name: scrapegraph_cont
+    ports:
+      - "8701:8501"
+    working_dir: /app
+    #command: python3 app.py
+    command: tail -f /dev/null #keep it running
+    restart: always
+    environment:
+      OPENAI_API_KEY: sk-proj-yourapi
+      MODEL: gpt-4o-mini      #gpt-4 
+      TEMPERATURE: 0 #dont be creative :)
+
+#docker exec -it scrapegraph_cont /bin/bash
+#podman exec -it scrapegraph_cont /bin/bash
+
+#streamlit run test_scrapegraph_st.py

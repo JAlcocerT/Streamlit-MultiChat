@@ -8,6 +8,7 @@ from Streamlit_Pages.Streamlit_groq import page_one
 from Streamlit_Pages.Streamlit_Ollama import page_two
 from Streamlit_Pages.Streamlit_OpenAI import page_three
 from Streamlit_Pages.Streamlit_Anthropic import page_four
+from Streamlit_Pages.Streamlit_ScrapeGraph import page_five
 
 from Streamlit_Pages import Auth_functions as af
 
@@ -23,6 +24,6 @@ if af.login(): #Simple Auth Layer
         st.session_state.selected_model = None
 
     # Choose page
-    pages = {'Groq API': page_one, 'Local with Ollama': page_two, 'OpenAI API': page_three, 'Anthropic API': page_four}
+    pages = {'Groq API': page_one, 'Local with Ollama': page_two, 'OpenAI API': page_three, 'Anthropic API': page_four, 'ScrapeGraph': page_five}
     selected_page = st.sidebar.selectbox("Choose the Model Provider:", options=list(pages.keys()))
     pages[selected_page]()
