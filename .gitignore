@@ -1,5 +1,6 @@
 multichat/
 *_venv/
+**/.env
 
 .streamlit/secrets.toml
 

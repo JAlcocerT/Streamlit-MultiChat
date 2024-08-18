@@ -69,7 +69,7 @@ streamlit run Z_multichat.py
 * **Alternatively** - Use the [Docker Image](https://github.com/JAlcocerT/Streamlit-MultiChat/pkgs/container/streamlit-multichat)
 
 ```sh
-docker pull ghcr.io/jalcocert/streamlit-multichat:latest
+docker pull ghcr.io/jalcocert/streamlit-multichat:latest #x86/ARM64
 ```
 
 ---
