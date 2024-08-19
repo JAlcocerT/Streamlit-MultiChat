@@ -1,0 +1,6 @@
+openai==1.41.0
+python-dotenv==1.0.1
+tabulate
+
+langchain==0.2.14
+langchain_community==0.2.12

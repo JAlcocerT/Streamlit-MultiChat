@@ -15,20 +15,18 @@ client = OpenAI(
     api_key=api_key,
 )
 
-pain_opportunities= """
-
+mtg_must_have= """
 * Purpose - Every meeting should have an objective—the reason why you're having the meeting. Before you schedule a meeting be sure you know what it is that you want out of the meeting.
 * Agenda - An agenda outlines the plan for the meeting and lets participants know what to expect. It allows them to be prepared so they can actively participate and bring their expertise to the table.  
 * preparation - Before the meeting all participants should take some time to review the agenda and prepare any questions they may have. 
-
 """
 
 chat_completion = client.chat.completions.create(
     messages=[
         {
             "role": "system",
-            "content": """You are an expert meeting assistant. Very aware of the following:
-                                
+            "content": f"""You are an expert meeting assistant. Very aware of the following:
+                              {mtg_must_have}  
                         """,
         },
         {"role": "user", "content": "Who are you and what can you do?"}
