@@ -3,6 +3,8 @@ FROM python:3.12.4-slim
 
 LABEL org.opencontainers.image.source https://github.com/JAlcocerT/Streamlit-MultiChat
 LABEL maintainer="Jesus Alcocer Tagua"
+LABEL org.opencontainers.image.description="A MultiChat with Python Streamlit"
+LABEL org.opencontainers.image.licenses=GPL-3.0
 
 # Copy local code to the container image.
 ENV APP_HOME /app

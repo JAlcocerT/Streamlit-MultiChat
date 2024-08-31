@@ -2,7 +2,9 @@
   <h1>Streamlit-MultiChat</h1>
 </div>
 
-Use **many large language models**: OpenAI / Anthropic / Open / Local LLM's with **one Streamlit Web App**.
+<div align="center">
+  <h3>Many LLMs - One Streamlit Web App</h3>
+</div>
 
 
 <div align="center">
@@ -19,6 +21,8 @@ Use **many large language models**: OpenAI / Anthropic / Open / Local LLM's with
     <img alt="Python Version" src="https://img.shields.io/badge/python-3.12-blue.svg" />
   </a>
 </div>
+
+Use **many large language models**: OpenAI / Anthropic / Open / Local LLM's with **one Streamlit Web App**.
 
 ## Features
 
@@ -94,3 +98,9 @@ Projects I got inspiration from / consolidated in this App were [tested here](ht
 * https://github.com/siddhardhan23/gemini-pro-streamlit-chatbot
 
 </details>
+
+<div align="center">
+  <a href="https://ko-fi.com/Z8Z1QPGUM">
+    <img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="ko-fi">
+  </a>
+</div>

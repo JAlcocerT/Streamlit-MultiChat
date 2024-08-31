@@ -19,13 +19,7 @@ chat_completion = client.chat.completions.create(
     messages=[
         {
             "role": "system",
-            "content": """You are an expert developer in MermaidJS Charts that it is able to understand user requirements and provide highlevel diagrams.
-                            Your favourite ones are: mindmap and basic flowchart:
-                            graph LR
-                                A[Square Rect] -- Link text --> B((Circle))
-                                A --> C(Round Rect)
-                                B --> D{Rhombus}
-                                C --> D
+            "content": """You are an expert developer in SliDev - the framework to create PPTs
                         """,
         },
         {"role": "user", "content": "Who are you and what can you do?"}
