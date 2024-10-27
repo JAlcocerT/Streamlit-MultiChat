@@ -31,6 +31,9 @@ Use **many large language models**: OpenAI / Anthropic / Open / Local LLM's with
   * OpenAI - GPT 3.5 / GPT4 / GPT4o / GPT4o-mini
   * Anthropic - Claude 3 (Opus / Sonnet) / Claude 3.5
   * Groq API
+* [SliDev presentation of the Streamlit-MultiChat](https://jalcocert.github.io/Streamlit-MultiChat/1)
+
+During the process, I also explored: [SliDev PPTs](https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/slidev), [ScrapeGraph](https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/ScrapeGraph/test_scrapegraph_stv2.py), [DaLLe](https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_Tests/Pict_for_SliDev-DaLLe), [Streamlit Auth](https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_Tests/Auth_sqlite) and [OpenAI as Custom Agents](https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_Tests/OpenAI)
 
 ## Getting Started 
 
