@@ -1,0 +1,5 @@
+location,price,rooms,amenities
+New York,500000,2,"parking, gym"
+Los Angeles,750000,3,"pool, parking, pet-friendly"
+Chicago,400000,1,"parking, laundry"
+Houston,600000,2,"parking, gym, pet-friendly"

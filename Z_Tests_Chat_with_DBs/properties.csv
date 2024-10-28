@@ -1,0 +1,11 @@
+id,location,price,type,bedrooms,bathrooms,amenities,square_footage
+1,New York,500000,apartment,2,2,"parking,garden",800
+2,Los Angeles,600000,house,3,2,"parking,pool",1200
+3,Chicago,400000,condo,1,1,"garden",600
+4,Houston,450000,apartment,2,2,"parking,garden,pool",850
+5,Phoenix,350000,house,3,2,"parking",1000
+6,Philadelphia,550000,condo,2,2,"garden,pool",900
+7,San Antonio,650000,apartment,3,3,"parking,garden",1100
+8,San Diego,700000,house,4,3,"parking,pool",1300
+9,Dallas,550000,condo,2,2,"parking,garden,pool",950
+10,San Jose,600000,apartment,2,2,"garden",800

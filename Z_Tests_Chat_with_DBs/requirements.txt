@@ -1,0 +1,6 @@
+
+openai==0.28.1 #0.28.0 #https://pypi.org/project/openai/#history
+streamlit==1.36.0 #https://pypi.org/project/streamlit/#history
+pandasai==2.2 #https://pypi.org/project/pandasai/
+
+#pip install -r requirements.txt

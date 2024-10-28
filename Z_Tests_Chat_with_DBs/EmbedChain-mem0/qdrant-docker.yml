@@ -1,0 +1,47 @@
+# version: '3'
+# services:
+#   qdrant:
+#     container_name: my_qdrant_container
+#     image: qdrant/qdrant
+#     ports:
+#       - "6333:6333"
+#     volumes:
+#       - qdrant_data:/path/to/qdrant_data
+
+# volumes:
+#   qdrant_data:
+
+# version: '3.8'
+
+# services:
+#   robby_service:
+#     image: multiagent_crew
+#     container_name: multiagent_crew
+#     ports:
+#       - "8090:8000"
+#     #command: streamlit run app.py
+#     command: tail -f /dev/null
+
+# # streamlit run src/Home.py
+
+version: '3.8'
+
+services:
+  robbyw_service:
+    image: multiagent_crew
+    container_name: multiagent_crewww
+    ports:
+      - "8070:8000"
+    #command: streamlit run app.py
+    command: tail -f /dev/null
+
+  qdrant:
+    container_name: my_qdrant_containerw
+    image: qdrant/qdrant
+    ports:
+      - "6333:6333"
+    volumes:
+      - qdrant_data:/path/to/qdrant_data
+
+volumes:
+  qdrant_data:

@@ -1,0 +1,7 @@
+mem0ai
+
+llama-index==0.10.56
+llama-index-llms-anthropic==0.1.15
+llama-index-embeddings-huggingface==0.2.2
+
+#pip install -r requirements.txt #all at once
