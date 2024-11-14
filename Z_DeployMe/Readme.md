@@ -11,16 +11,19 @@
 [![GitHub release](https://img.shields.io/github/release/xmrig/xmrig-proxy/all.svg)](https://github.com/xmrig/xmrig-proxy/releases)
 [![GitHub Release Date](https://img.shields.io/github/release-date-pre/xmrig/xmrig-proxy.svg)](https://github.com/xmrig/xmrig-proxy/releases)
 
-Clone the repository and use the **Docker-Compose with your credentials**:
+Clone the repository and use the **Docker-Compose with your credentials**.
 
-* https://console.anthropic.com/workbench/
-* https://console.groq.com/keys
-* https://platform.openai.com/api-keys
+1. Get your **APIs Keys**
+  * https://console.anthropic.com/workbench/
+  * https://console.groq.com/keys
+  * https://platform.openai.com/api-keys
+
+2. Pull the container image
 
 ```sh
 docker pull ghcr.io/jalcocert/streamlit-multichat:latest
 ```
-
+3. Use the docker compose of this folder
 ```sh
 git clone https://github.com/JAlcocerT/Streamlit-MultiChat
 
@@ -61,7 +64,6 @@ By default, Im using **buildx to create ARM64 and x86** images, but you can Buil
 
 Once built, your image will be visible: `docker images`
 
-Why would I want to build it?
-
-* You want to run it on a different architecture (Any other SBC: ARM32, ...)
-* You want to build the image from the source, because why not
+* Why would I want to build it?
+  * You want to run it on a different architecture (Any other SBC: ARM32, ...)
+  * You want to build the image from the source, because why not
