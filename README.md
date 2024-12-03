@@ -26,28 +26,34 @@
   </a>
 </div>
 
-Use **many large language models**: OpenAI / Anthropic / Open / Local LLM's with **one Streamlit Web App**.
-
 ## Features
 
+Use **many large language models**: OpenAI, Anthropic, Open / Local LLM's with **one Streamlit Web App**.
+
 * LLM Support
-  * Ollama
+  * Ollama - Open Source Models
   * OpenAI - GPT 3.5 / GPT4 / GPT4o / GPT4o-mini
   * Anthropic - Claude 3 (Opus / Sonnet) / Claude 3.5
-  * Groq API
+  * Groq API - LlaMa models using quick LPU inference
 * Extended explanation
   * [**SliDev presentation** of the Streamlit-MultiChat](https://jalcocert.github.io/Streamlit-MultiChat/1)
-  * [This **blog post**](https://jalcocert.github.io/JAlcocerT/create-streamlit-chatgpt/#a-multichat-with-streamlit)
+  * [This **blog post** →](https://jalcocert.github.io/JAlcocerT/create-streamlit-chatgpt/#a-multichat-with-streamlit)
+  * Deploy as per `https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_DeployMe`
 
 During the process, I also explored: [SliDev PPTs](https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/slidev), [ScrapeGraph](https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/ScrapeGraph/test_scrapegraph_stv2.py), [DaLLe](https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_Tests/Pict_for_SliDev-DaLLe), [Streamlit Auth](https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_Tests/Auth_sqlite) and [OpenAI as Custom Agents](https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_Tests/OpenAI)
 
 ## Getting Started 
 
 <details>
-  <summary>Clone and Run 👇</summary>
+  <summary>Clone and Run with the API keys 👇</summary>
   &nbsp;
 
-Try the Project quickly with [Python Venv's](https://fossengineer.com/python-dependencies-for-ai/):
+  * OpenAI API Keys - <https://platform.openai.com/api-keys>
+  * Anthropic - <https://console.anthropic.com/settings/keys>
+  * Groq - <https://console.groq.com/keys>
+  * For Ollama, you need [this setup](https://fossengineer.com/selfhosting-llms-ollama/)
+
+Try the Project quickly with [**Python Venv's**](https://fossengineer.com/python-dependencies-for-ai/):
 
 ```sh
 git clone https://github.com/JAlcocerT/Streamlit-MultiChat
