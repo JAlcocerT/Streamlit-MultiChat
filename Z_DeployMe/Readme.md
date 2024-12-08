@@ -23,7 +23,8 @@ Clone the repository and use the **Docker-Compose with your credentials**.
 ```sh
 docker pull ghcr.io/jalcocert/streamlit-multichat:latest
 ```
-3. Use the docker compose of this folder
+3. Get [docker ready](https://jalcocert.github.io/JAlcocerT/docs/dev/dev-interesting-it-concepts/#containers) and Use the **docker compose** of this folder:
+
 ```sh
 git clone https://github.com/JAlcocerT/Streamlit-MultiChat
 

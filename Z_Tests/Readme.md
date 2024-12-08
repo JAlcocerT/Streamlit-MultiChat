@@ -1,6 +1,6 @@
-In this folder is how I've been iterating.
+In this folder is how I've been iterating between different code versions.
 
-## Thanks To Python Venv's❤️
+## Thanks To Python Venv's ❤️
 
 I have been testing the projects here before including them in the MultiChat.
 
@@ -10,3 +10,7 @@ test\Scripts\activate #activate venv (windows)
 ```
 
 * https://github.com/JAlcocerT/phidata/tree/main/cookbook/llms/groq/video_summary
+
+## Streamlitopedia
+
+* https://pmbaumgartner.github.io/streamlitopedia/

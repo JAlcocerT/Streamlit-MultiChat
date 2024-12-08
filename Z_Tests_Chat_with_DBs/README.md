@@ -1,4 +1,8 @@
-<<<<<<< HEAD
+* https://github.com/JAlcocerT/Data-Chat
+* [This **blog post** →](https://jalcocert.github.io/JAlcocerT/how-to-use-rags-with-python/)
+
+---
+
 # Streamlit-Chat-DB
 
 * PandasAI
@@ -18,6 +22,3 @@ source chatdb/bin/activate #(linux)
 pip install -r requirements.txt #all at once
 streamlit run sample.py
 ```
-=======
-# Streamlit-Chat-DB
->>>>>>> 8da26460a1943124beb2cb10bc08cb48c476b732

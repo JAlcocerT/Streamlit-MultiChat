@@ -26,6 +26,8 @@
   </a>
 </div>
 
+A custom Streamlit Web App to Chat with the latest LLMs and get a `per use cost` instead of a fixed monthly price.
+
 ## Features
 
 Use **many large language models**: OpenAI, Anthropic, Open / Local LLM's with **one Streamlit Web App**.
@@ -45,7 +47,7 @@ During the process, I also explored: [SliDev PPTs](https://github.com/JAlcocerT/
 ## Getting Started 
 
 <details>
-  <summary>Clone and Run with the API keys 👇</summary>
+  <summary>Clone the repository and Run with your API keys 👇</summary>
   &nbsp;
 
   * OpenAI API Keys - <https://platform.openai.com/api-keys>
