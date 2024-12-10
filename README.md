@@ -93,6 +93,8 @@ streamlit run Z_multichat.py
 docker pull ghcr.io/jalcocert/streamlit-multichat:latest #x86/ARM64
 ```
 
+> You will need [Docker](https://jalcocert.github.io/JAlcocerT/docs/dev/dev-interesting-it-concepts/#containers) ready and optionally [Portainer](https://fossengineer.com/selfhosting-portainer-docker/)
+
 ---
 
 ## Thanks to ❤️
