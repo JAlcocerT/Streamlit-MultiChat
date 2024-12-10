@@ -1,0 +1,8 @@
+flask
+openai
+
+python-dotenv
+
+
+#pip install -r requirements.txt
+#pip install --no-cache-dir -r requirements_test.txt
