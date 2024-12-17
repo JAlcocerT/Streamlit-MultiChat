@@ -28,6 +28,13 @@
 
 A custom Streamlit Web App to Chat with the latest LLMs and get a `per use cost` instead of a fixed monthly price.
 
+<div align="center">
+
+[![GitHub Release](https://img.shields.io/github/release/JAlcocerT/Streamlit-MultiChat/all.svg)](https://github.com/JAlcocerT/Streamlit-MultiChat/releases)
+[![GitHub Release Date](https://img.shields.io/github/release-date-pre/JAlcocerT/Streamlit-MultiChat.svg)](https://github.com/JAlcocerT/Streamlit-MultiChat/releases)
+
+</div>
+
 ## Features
 
 Use **many large language models**: OpenAI, Anthropic, Open / Local LLM's with **one Streamlit Web App**.
@@ -59,6 +66,9 @@ During the process, I also explored: [SliDev PPTs](https://github.com/JAlcocerT/
 
 Try the Project quickly with [**Python Venv's**](https://fossengineer.com/python-dependencies-for-ai/):
 
+
+1. Get [Python Installed](https://jalcocert.github.io/JAlcocerT/guide-python/#installing-python-)
+2. Prepare a [Venv](https://jalcocert.github.io/JAlcocerT/useful-python-stuff/#python-apps-reliability)
 ```sh
 git clone https://github.com/JAlcocerT/Streamlit-MultiChat
 #python -m venv multichat_venv #create the venv

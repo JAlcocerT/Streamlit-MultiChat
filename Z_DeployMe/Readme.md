@@ -1,27 +1,40 @@
 ## Deploy Streamlit MultiChat
 
 
+* [The Project is documented **here** →](https://jalcocert.github.io/JAlcocerT/create-streamlit-chatgpt/)
+* [See more **AI Projects** (with Docker) **here** →](https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/Project_MultiChat)
+* GHCR Package: <https://github.com/JAlcocerT/Streamlit-MultiChat/pkgs/container/streamlit-multichat>
 
-[The Project is documented **here** →](https://jalcocert.github.io/JAlcocerT/create-streamlit-chatgpt/)
-[See more AI Projects **here** →](https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/Project_MultiChat)
+<div align="center">
+
+[![GitHub Release](https://img.shields.io/github/release/JAlcocerT/Streamlit-MultiChat/all.svg)](https://github.com/JAlcocerT/Streamlit-MultiChat/releases)
+[![GitHub Release Date](https://img.shields.io/github/release-date-pre/JAlcocerT/Streamlit-MultiChat.svg)](https://github.com/JAlcocerT/Streamlit-MultiChat/releases)
+
+</div>
 
 > Using [Github Actions](https://fossengineer.com/docker-github-actions-cicd/) with [MultiArch Images](https://jalcocert.github.io/JAlcocerT/create-streamlit-chatgpt/#conclusion---and-what-i-learnt)
 
 
-[![GitHub release](https://img.shields.io/github/release/xmrig/xmrig-proxy/all.svg)](https://github.com/xmrig/xmrig-proxy/releases)
-[![GitHub Release Date](https://img.shields.io/github/release-date-pre/xmrig/xmrig-proxy.svg)](https://github.com/xmrig/xmrig-proxy/releases)
+Clone the repository and use the **Docker-Compose with your API credentials**.
 
-Clone the repository and use the **Docker-Compose with your credentials**.
+The **architectures** supported by this **container image** are:
+
+| Architecture | Available | Tag |
+| :----: | :----: | ---- |
+| x86-64 | ✅ | Multi-Arch |
+| arm64 | ✅ | Multi-Arch |
+| armhf | N/A | Not Supported |
 
 1. Get your **APIs Keys**
   * https://console.anthropic.com/workbench/
   * https://console.groq.com/keys
   * https://platform.openai.com/api-keys
+  * [Deploy Ollama](https://fossengineer.com/selfhosting-llms-ollama/)
 
-2. Pull the container image
+2. Pull the **container image**
 
 ```sh
-docker pull ghcr.io/jalcocert/streamlit-multichat:latest
+docker pull ghcr.io/jalcocert/streamlit-multichat #:v1.1  #:latest
 ```
 3. Get [docker ready](https://jalcocert.github.io/JAlcocerT/docs/dev/dev-interesting-it-concepts/#containers) and Use the **docker compose** of this folder:
 
@@ -41,11 +54,22 @@ By default, it will use the Docker Image built with GH Actions and [available at
 
 By default, Im using **buildx to create ARM64 and x86** images, but you can Build your own Image:
 
-```sh
-#git clone https://github.com/JAlcocerT/Streamlit-MultiChat
-#cd Streamlit-MultiChat
 
-#docker build -t streamlitmultichat .
+<details>
+  <summary>Why would I want to build it? 👇</summary>
+  &nbsp;
+
+
+* You want to run it on a different architecture
+* You want to build the image from the source, because why not
+
+</details>
+
+```sh
+git clone https://github.com/JAlcocerT/Streamlit-MultiChat
+cd Streamlit-MultiChat
+
+docker build -t streamlitmultichat .
 #cd Z_DeployMe
 #docker-compose up -d
 
@@ -64,7 +88,3 @@ By default, Im using **buildx to create ARM64 and x86** images, but you can Buil
 ```
 
 Once built, your image will be visible: `docker images`
-
-* Why would I want to build it?
-  * You want to run it on a different architecture (Any other SBC: ARM32, ...)
-  * You want to build the image from the source, because why not
