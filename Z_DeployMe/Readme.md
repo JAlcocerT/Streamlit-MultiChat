@@ -1,12 +1,12 @@
 ## Deploy Streamlit MultiChat
 
-<div align="center" style="line-height: 1;">
-  <a href="https://opensource.org/license/gpl-3-0" style="margin: 2px;">
-    <img alt="Code License" src="https://img.shields.io/badge/License-GPLv3-blue.svg" style="display: inline-block; vertical-align: middle;"/>
-  </a>
 
 
-</div>
+[The Project is documented **here** →](https://jalcocert.github.io/JAlcocerT/create-streamlit-chatgpt/)
+[See more AI Projects **here** →](https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/Project_MultiChat)
+
+> Using [Github Actions](https://fossengineer.com/docker-github-actions-cicd/) with [MultiArch Images](https://jalcocert.github.io/JAlcocerT/create-streamlit-chatgpt/#conclusion---and-what-i-learnt)
+
 
 [![GitHub release](https://img.shields.io/github/release/xmrig/xmrig-proxy/all.svg)](https://github.com/xmrig/xmrig-proxy/releases)
 [![GitHub Release Date](https://img.shields.io/github/release-date-pre/xmrig/xmrig-proxy.svg)](https://github.com/xmrig/xmrig-proxy/releases)

@@ -46,6 +46,8 @@ During the process, I also explored: [SliDev PPTs](https://github.com/JAlcocerT/
 
 ## Getting Started 
 
+[The Project is documented **here** →](https://jalcocert.github.io/JAlcocerT/create-streamlit-chatgpt/)
+
 <details>
   <summary>Clone the repository and Run with your API keys 👇</summary>
   &nbsp;
@@ -59,14 +61,19 @@ Try the Project quickly with [**Python Venv's**](https://fossengineer.com/python
 
 ```sh
 git clone https://github.com/JAlcocerT/Streamlit-MultiChat
-python -m venv multichat_venv #create the venv
+#python -m venv multichat_venv #create the venv
+python3 -m venv multichat_venv #linux
 
-multichat_venv\Scripts\activate #activate venv (windows)
+#multichat_venv\Scripts\activate #activate venv (windows)
 source multichat_venv/bin/activate #(linux)
 ```
 
+Then, provide the API Keys and run the Streamlit Web App:
+
 ```sh
 pip install -r requirements.txt #all at once
+
+cp ./.streamlit/secrets_sample.toml ./.streamlit/secrets.toml #fill the API Keys
 streamlit run Z_multichat.py
 ```
 
