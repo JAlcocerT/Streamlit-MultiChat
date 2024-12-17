@@ -13,6 +13,7 @@ services:
       echo 'GROQ_API_KEY = \"gsk_groqAPIhere\"' >> /app/.streamlit/secrets.toml && \
       echo 'ANTHROPIC_API_KEY = \"sk-ant-yourANTHROPICapihere\"' >> /app/.streamlit/secrets.toml && \      
       streamlit run Z_multichat.py"
+    #command: tail -f /dev/null 
     ports:
       - "8501:8501"
     restart: always
@@ -38,3 +39,5 @@ volumes:
 #podman run -p .....
 
 #docker-compose up -d
+
+#docker exec -it streamlit_multichat /bin/bash 
