@@ -1,4 +1,4 @@
-name: Deploy Slidev site to Pages
+name: Deploy Slidev site to Github Pages
 
 on:
   # push:

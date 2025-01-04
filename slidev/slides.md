@@ -493,7 +493,7 @@ you need to run the Ollama server first.
 
 <div mt-20 v-click>
 
-[Learn More](https://fossengineer.com/docker-alternatives-for-data-analytics/)
+[Learn More](https://jalcocert.github.io/JAlcocerT/blog/dev-in-docker//)
 
 </div>
 
@@ -560,9 +560,9 @@ hideInToc: true
 
 # Thanks for your Time
 
-Demo Time + Q&A Session
+Demo Time + Q&A Session!
 
-[Documentation](https://fossengineer.com/create-streamlit-chatgpt/) · [GitHub](https://github.com/JAlcocerT/Streamlit-MultiChat) · [Showcase](https://chat.iotechcrafts.com/) · [PPT Guide](https://fossengineer.com/how-to-use-slidev/)
+[Documentation](https://jalcocert.github.io/JAlcocerT/create-streamlit-chatgpt/) · [GitHub](https://github.com/JAlcocerT/Streamlit-MultiChat) · [Showcase](https://chat.iotechcrafts.com/) · [PPT Guide](https://jalcocert.github.io/JAlcocerT/creating-presentations-with-ai)
 
 <PoweredBySlidev mt-5 />
 
@@ -570,6 +570,8 @@ Demo Time + Q&A Session
 npm init slidev
 npm i -D playwright-chromium
 
-slidev build --base /Streamlit-Multichat --download
+slidev build --base /Streamlit-Multichat --download #this ensures that the base path is the same as the repo name so that it works with github pages
 #slidev build --download
 ```
+
+**More AI soon, For real!**
