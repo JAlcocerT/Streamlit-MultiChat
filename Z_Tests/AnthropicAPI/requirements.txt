@@ -4,6 +4,7 @@ anthropic==0.39.0
 #streamlit==1.40.1
 python-dotenv
 
+#https://community.openai.com/t/error-with-openai-1-56-0-client-init-got-an-unexpected-keyword-argument-proxies/1040332/12
 httpx==0.27.2 #https://pypi.org/project/httpx/
 
 #pip install -r requirements.txt

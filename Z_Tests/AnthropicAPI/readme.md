@@ -5,6 +5,8 @@
 
 * https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/streamlit_anthropic2.py
 
+> https://console.anthropic.com/settings/keys
+
 
 ```sh
 python3 -m venv Z_AnthropicTests_venv
