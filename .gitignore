@@ -4,7 +4,8 @@ multichat/
 
 .streamlit/secrets.toml
 
-
+*.mp3
+transcription*.txt
 
 helpers/__pycache__/*
 __pycache__/
