@@ -13,7 +13,7 @@ python3 -m venv Z_AnthropicTests_venv
 source Z_AnthropicTests_venv/bin/activate
 #.\Z_AnthropicTests_venv\Scripts\activate #Windows
 
-#pip install -r requirements.txt
+pip install -r requirements.txt
 
 
 source .env
@@ -22,7 +22,7 @@ source .env
 #$env:GROQ_API_KEY="your-api-key-here"
 echo $GROQ_API_KEY $OPENAI_API_KEY $ANTHROPIC_API_KEY
 
-streamlit run anthropic_api_test.py
+python3 anthropic_api_test.py
 
 # git add .
 # git commit -m "better st offer analyzer"

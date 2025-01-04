@@ -1,6 +1,8 @@
 ###QUERIES TO API AS PER THE GROQ API, DEFAULT###
 from groq import Groq
 
+
+import os
 # Load environment variables from .env file
 from dotenv import load_dotenv
 load_dotenv()  # This loads all environment variables from the .env file

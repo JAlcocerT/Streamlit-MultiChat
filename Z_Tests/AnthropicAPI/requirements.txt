@@ -1,6 +1,10 @@
+
+#anthropic==0.28.1
 anthropic==0.39.0
-streamlit==1.40.1
+#streamlit==1.40.1
 python-dotenv
+
+httpx==0.27.2 #https://pypi.org/project/httpx/
 
 #pip install -r requirements.txt
 

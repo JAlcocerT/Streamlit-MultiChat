@@ -1,26 +1,21 @@
-import streamlit as st
 import anthropic
-import os
 
+#https://docs.anthropic.com/en/api/messages
+#https://docs.anthropic.com/en/api/messages-examples
+
+import os
 # Load environment variables from .env file
 from dotenv import load_dotenv
 load_dotenv()  # This loads all environment variables from the .env file
 
-# Create the Anthropi client
-api_key = os.getenv("ANTHROPIC_API_KEY")
-client = anthropic.Anthropic(api_key=api_key)
 
-# Get user input
-
-
-message = client.messages.create(
-    model="claude-3-sonnet-20240229",
-    max_tokens=689,
-    temperature=0,
+message = anthropic.Anthropic().messages.create(
+    model="claude-3-5-sonnet-20241022",
+    max_tokens=1024,
     messages=[
-        {"role": "user", "content": f"What are the alternatives to selfhost a streamlit app?"}
+        {"role": "user", "content": "Hello, Claude, could you explain different ways to deploy python streamlit web apps?. Simply List them in bullet points"}
     ]
 )
+print(message)
 
-    
-mood_analysis = ''.join(block.text for block in message.content)  # Adjusted line
+print(message.content)
