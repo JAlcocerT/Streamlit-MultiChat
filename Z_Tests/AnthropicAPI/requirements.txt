@@ -1,0 +1,9 @@
+anthropic==0.39.0
+streamlit==1.40.1
+python-dotenv
+
+#pip install -r requirements.txt
+
+#pip freeze | grep -E '^(anthropic|streamlit)=='
+#pip freeze | grep -Ff requirements.txt
+#pip freeze | grep -E "^($(paste -sd '|' requirements.txt))=="

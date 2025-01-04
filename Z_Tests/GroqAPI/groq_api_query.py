@@ -9,11 +9,12 @@ client = Groq()
 
 # Adding a sample message in the `messages` list
 messages = [
-    {"role": "user", "content": "Hello, which model are you and who is your creator? Whats your context window? and how many parameters you have"}
+    {"role": "user", "content": "Hello, what it is the fastest LLM inference in the market?"}
 ]
 
 completion = client.chat.completions.create(
-    model="llama-3.2-90b-vision-preview",
+    model="llama-3.3-70b-versatile",
+    #model="llama-3.2-90b-vision-preview",
     #model="llama3-groq-70b-8192-tool-use-preview",
     messages=messages,  # Now the messages list contains one message
     temperature=0.5,
