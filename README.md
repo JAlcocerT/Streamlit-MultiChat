@@ -18,15 +18,11 @@
   <a href="https://github.com/JAlcocerT/Streamlit-MultiChat/actions/workflows/Streamlit_GHA_MultiArch.yml" style="margin-right: 5px;">
     <img alt="GH Actions Workflow" src="https://github.com/JAlcocerT/Streamlit-MultiChat/actions/workflows/Streamlit_GHA_MultiArch.yml/badge.svg" />
   </a>
-  <a href="https://GitHub.com/JAlcocerT/Streamlit-Multichat/graphs/commit-activity" style="margin-right: 5px;">
-    <img alt="Mantained" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
-  </a>
+
   <a href="https://www.python.org/downloads/release/python-312">
     <img alt="Python Version" src="https://img.shields.io/badge/python-3.12-blue.svg" />
   </a>
 </div>
-
-A custom Streamlit Web App to Chat with the latest LLMs and get a `per use cost` instead of a fixed monthly price.
 
 <div align="center">
 
@@ -34,6 +30,26 @@ A custom Streamlit Web App to Chat with the latest LLMs and get a `per use cost`
 [![GitHub Release Date](https://img.shields.io/github/release-date-pre/JAlcocerT/Streamlit-MultiChat.svg)](https://github.com/JAlcocerT/Streamlit-MultiChat/releases)
 
 </div>
+
+<p align="center">
+
+  <a href="https://youtube.com/@JAlcocerTech">
+    <img alt="YouTube Channel" src="https://img.shields.io/badge/YouTube-Channel-red" />
+  </a>
+  <a href="https://GitHub.com/JAlcocerT/Docker/graphs/commit-activity" style="margin-right: 5px;">
+    <img alt="Maintained" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
+  </a>
+  <a href="https://github.com/JAlcocerT/Docker">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/JAlcocerT/Docker" />
+  </a>
+  <a href="https://github.com/JAlcocerT/Docker">
+    <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/JAlcocerT/Docker" />
+  </a>
+</p>
+
+A custom Streamlit Web App to Chat with the latest LLMs and get a `per use cost` instead of a fixed monthly price.
+
+
 
 ## Features
 
@@ -111,7 +127,7 @@ streamlit run Z_multichat.py
 docker pull ghcr.io/jalcocert/streamlit-multichat:latest #x86/ARM64
 ```
 
-> You will need [Docker](https://jalcocert.github.io/JAlcocerT/docs/dev/dev-interesting-it-concepts/#containers) ready and optionally [Portainer](https://fossengineer.com/selfhosting-portainer-docker/)
+> You will need [Docker](https://jalcocert.github.io/JAlcocerT/docs/dev/dev-interesting-it-concepts/#containers) ready. And *optionally [Portainer](https://fossengineer.com/selfhosting-portainer-docker/)*
 
 ---
 
