@@ -1,5 +1,9 @@
 In this folder is how I've been iterating between different code versions.
 
+> Have done similar tests here: https://github.com/JAlcocerT/Streamlit-AIssistant/tree/main/Z_Tests
+
+---
+
 ## Thanks To Python Venv's ❤️
 
 I have been testing the projects here before including them in the MultiChat.

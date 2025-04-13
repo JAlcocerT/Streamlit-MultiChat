@@ -1,6 +1,8 @@
-openai==1.41.0
+openai==1.41.0 #pip install --upgrade openai
 python-dotenv==1.0.1
 tabulate
 
 langchain==0.2.14
 langchain_community==0.2.12
+
+#pip install -r requirements.txt #all at once
