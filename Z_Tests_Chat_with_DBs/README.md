@@ -1,6 +1,8 @@
 * https://github.com/JAlcocerT/Data-Chat
 * [This **blog post** →](https://jalcocert.github.io/JAlcocerT/how-to-use-rags-with-python/)
 
+> See more [here](https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/)
+
 ---
 
 # Streamlit-Chat-DB

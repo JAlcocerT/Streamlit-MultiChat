@@ -36,14 +36,14 @@
   <a href="https://youtube.com/@JAlcocerTech">
     <img alt="YouTube Channel" src="https://img.shields.io/badge/YouTube-Channel-red" />
   </a>
-  <a href="https://GitHub.com/JAlcocerT/Docker/graphs/commit-activity" style="margin-right: 5px;">
+  <a href="https://GitHub.com/JAlcocerT/Streamlit-MultiChat/graphs/commit-activity" style="margin-right: 5px;">
     <img alt="Maintained" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
   </a>
-  <a href="https://github.com/JAlcocerT/Docker">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/JAlcocerT/Docker" />
+  <a href="https://github.com/JAlcocerT/Streamlit-MultiChat">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/JAlcocerT/Streamlit-MultiChat" />
   </a>
-  <a href="https://github.com/JAlcocerT/Docker">
-    <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/JAlcocerT/Docker" />
+  <a href="https://github.com/JAlcocerT/Streamlit-MultiChat">
+    <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/JAlcocerT/Streamlit-MultiChat" />
   </a>
 </p>
 
