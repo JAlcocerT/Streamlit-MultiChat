@@ -2,6 +2,8 @@ multichat/
 *_venv/
 **/.env
 
+*.pcm
+
 uv.lock
 
 .streamlit/secrets.toml

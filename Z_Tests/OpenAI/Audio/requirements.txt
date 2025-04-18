@@ -1,0 +1,9 @@
+openai==1.75.0
+
+python-dotenv==1.0.1
+
+numpy==2.2.4 #print(numpy.__version__)
+openai[voice_helpers] 
+
+
+#sudo apt install libportaudio2
