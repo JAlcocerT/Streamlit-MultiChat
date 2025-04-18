@@ -1,3 +1,7 @@
+####https://openai.com/api/pricing/
+
+###uv run list_models.py > models.txt
+
 # import openai
 
 # # Retrieve the list of available models

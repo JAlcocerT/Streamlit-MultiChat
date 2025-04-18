@@ -19,6 +19,7 @@ if "selected_model" not in st.session_state:
     st.session_state.selected_model = None
 
 # Choose page
-pages = {'Groq API': page_one, 'Local with Ollama': page_two, 'OpenAI API': page_three, 'Anthropic API': page_four}
+# pages = {'Groq API': page_one, 'Local with Ollama': page_two, 'OpenAI API': page_three, 'Anthropic API': page_four}
+pages = {'OpenAI API': page_three, 'Groq API': page_one, 'Local with Ollama': page_two, 'Anthropic API': page_four}
 selected_page = st.sidebar.selectbox("Choose the Model Provider:", options=list(pages.keys()))
 pages[selected_page]()

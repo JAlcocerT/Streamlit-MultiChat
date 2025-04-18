@@ -98,7 +98,8 @@ source multichat_venv/bin/activate #(linux)
 Then, provide the API Keys and run the Streamlit Web App:
 
 ```sh
-pip install -r requirements.txt #all at once
+#uv pip install -r requirements.txt
+pip install -r requirements.txt #all at once, ~2min
 
 cp ./.streamlit/secrets_sample.toml ./.streamlit/secrets.toml #fill the API Keys
 streamlit run Z_multichat.py
