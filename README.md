@@ -47,7 +47,7 @@
   </a>
 </p>
 
-A custom Streamlit Web App to Chat with the latest LLMs and get a `per use cost` instead of a fixed monthly price.
+A custom Streamlit Web App to Chat with the latest LLMs and get a *per use cost* instead of a fixed monthly price.
 
 
 
@@ -63,13 +63,25 @@ Use **many large language models**: OpenAI, Anthropic, Open / Local LLM's with *
 * Extended explanation
   * [**SliDev presentation** of the Streamlit-MultiChat](https://jalcocert.github.io/Streamlit-MultiChat/1)
   * [This **blog post** →](https://jalcocert.github.io/JAlcocerT/create-streamlit-chatgpt/#a-multichat-with-streamlit)
-  * Deploy as per `https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_DeployMe`
+  * Deploy as per [Z_DeployMe](https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_DeployMe)
 
 During the process, I also explored: [SliDev PPTs](https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/slidev), [ScrapeGraph](https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/ScrapeGraph/test_scrapegraph_stv2.py), [DaLLe](https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_Tests/Pict_for_SliDev-DaLLe), [Streamlit Auth](https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_Tests/Auth_sqlite) and [OpenAI as Custom Agents](https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_Tests/OpenAI)
 
 ## Getting Started 
 
 [The Project is documented **here** →](https://jalcocert.github.io/JAlcocerT/create-streamlit-chatgpt/)
+
+
+
+> [!IMPORTANT]
+> You have few alternatives to run this project locally:
+
+```sh
+uv sync #as per pyproject.toml
+cp ./streamlit/secrets_sample.toml ./streamlit/secrets.toml #add your APIs
+uv run streamlit run Z_multichat.py
+```
+
 
 <details>
   <summary>Clone the repository and Run with your API keys 👇</summary>
@@ -126,6 +138,7 @@ streamlit run Z_multichat.py
 
 ```sh
 docker pull ghcr.io/jalcocert/streamlit-multichat:latest #x86/ARM64
+make up #downloads and configures the docker-compose
 ```
 
 > You will need [Docker](https://jalcocert.github.io/JAlcocerT/docs/dev/dev-interesting-it-concepts/#containers) ready. And *optionally [Portainer](https://fossengineer.com/selfhosting-portainer-docker/)*

@@ -1,5 +1,5 @@
 [project]
-name = "StreamlitMultichat"
+name = "Streamlit-Multichat"
 version = "1.2"
 description = "Chat with differents LLMs via Streamlit UI"
 readme = "README.md"
