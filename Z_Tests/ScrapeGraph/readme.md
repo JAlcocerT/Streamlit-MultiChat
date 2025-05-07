@@ -1,3 +1,8 @@
+* https://jalcocert.github.io/JAlcocerT/scrap-and-chat-with-the-web/#scrapegraph
+
+
+---
+
 ```sh
 python -m venv scrapestream_venv #create the venv
 
