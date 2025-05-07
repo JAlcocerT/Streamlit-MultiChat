@@ -112,9 +112,11 @@ Then, provide the API Keys and run the Streamlit Web App:
 ```sh
 #uv pip install -r requirements.txt
 pip install -r requirements.txt #all at once, ~2min
+#pip freeze > requirements-output.txt
 
 cp ./.streamlit/secrets_sample.toml ./.streamlit/secrets.toml #fill the API Keys
-streamlit run Z_multichat.py
+#streamlit run Z_multichat.py
+streamlit run Z_multichat_Auth.py
 ```
 
 * Make sure to have [Ollama ready](https://fossengineer.com/selfhosting-llms-ollama/) and running your desired model!

@@ -13,9 +13,30 @@ models = {
     "mixtral-8x7b-32768": {"name": "Mixtral-8x7b-Instruct-v0.1 via Groq", "tokens": 32768, "developer": "Mistral"},
 }
 
-#st.set_page_config(page_icon="💬", layout="wide", page_title="Multi-Chat Bot")
+# Allow flexible Groq API key loading: from Streamlit secrets or .env/environment
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
-client = Groq(api_key=st.secrets["GROQ_API_KEY"],)
+# Determine Groq API key from Streamlit secrets or environment
+_groq_api_key = None
+try:
+    _groq_api_key = st.secrets.get("GROQ_API_KEY")
+except Exception:
+    _groq_api_key = None
+if not _groq_api_key:
+    _groq_api_key = os.getenv("GROQ_API_KEY")
+
+# Initialize client if key is provided
+client = None
+if _groq_api_key:
+    try:
+        client = Groq(api_key=_groq_api_key)
+    except Exception as _e:
+        # Initialization failed; client remains None
+        client = None
+        # Defer error reporting to the page
+        print(f"[Groq] Error initializing client: {_e}")
 
 def generate_chat_responses(chat_completion) -> Generator[str, None, None]:
     for chunk in chat_completion:
@@ -23,6 +44,12 @@ def generate_chat_responses(chat_completion) -> Generator[str, None, None]:
             yield chunk.choices[0].delta.content
 
 def page_one():
+    # Ensure Groq client is initialized
+    if client is None:
+        st.sidebar.error(
+            "Groq API key is not configured. Please set GROQ_API_KEY in Streamlit secrets or environment."
+        )
+        return
     with st.sidebar:
         st.title('🤖💬 Groq Chatbot')
 
