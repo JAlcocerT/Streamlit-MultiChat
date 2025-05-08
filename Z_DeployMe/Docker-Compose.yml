@@ -2,7 +2,7 @@
 
 services:
   streamlit-multichat:
-    image: ghcr.io/jalcocert/streamlit-multichat #:v1.1
+    image: ghcr.io/jalcocert/streamlit-multichat #:v1.1 #st_multichat_v1_3
     container_name: streamlit_multichat
     volumes:
       - ai_streamlit_multichat:/app
@@ -12,7 +12,8 @@ services:
       echo 'OPENAI_API_KEY = \"sk-proj-openaiAPIhere\"' > /app/.streamlit/secrets.toml && \
       echo 'GROQ_API_KEY = \"gsk_groqAPIhere\"' >> /app/.streamlit/secrets.toml && \
       echo 'ANTHROPIC_API_KEY = \"sk-ant-yourANTHROPICapihere\"' >> /app/.streamlit/secrets.toml && \      
-      streamlit run Z_multichat.py"
+      streamlit run Z_multichat_Auth.py"
+    #streamlit run Z_multichat.py
     #command: tail -f /dev/null 
     ports:
       - "8501:8501"
@@ -42,3 +43,5 @@ volumes:
 #docker-compose up -d
 
 #docker exec -it streamlit_multichat /bin/bash 
+
+#https://github.com/JAlcocerT/Docker/blob/main/AI_Gen/Project_MultiChat/docker-compose.yml

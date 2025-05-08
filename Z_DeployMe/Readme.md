@@ -26,10 +26,11 @@ The **architectures** supported by this **container image** are:
 | armhf | N/A | Not Supported |
 
 1. Get your **APIs Keys**
-  * https://console.anthropic.com/workbench/
-  * https://console.groq.com/keys
-  * https://platform.openai.com/api-keys
-  * [Deploy Ollama](https://fossengineer.com/selfhosting-llms-ollama/)
+
+* https://console.anthropic.com/workbench/
+* https://console.groq.com/keys
+* https://platform.openai.com/api-keys
+* [Deploy Ollama](https://fossengineer.com/selfhosting-llms-ollama/)
 
 2. Pull the **container image**
 
