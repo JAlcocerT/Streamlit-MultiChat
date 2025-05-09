@@ -1,13 +1,21 @@
 * https://platform.openai.com/docs/guides/images?api-mode=responses
+* [This **blog post** →](https://jalcocert.github.io/JAlcocerT/ai-vision-models/)
 
-* https://jalcocert.github.io/JAlcocerT/ai-vision-models/
-
+1. Example Scrap Image and ask (**Vision API**):
 
 ```sh
 python3 scraping-ask-v2.py https://www.viviendasylocalesgranada.com/ficha/chalet/otura/urbanizacion-los-alijares/4348/13194834/es/ "What are your general comments about this property based on the images?" > comments_property_alijares.mdx
 ```
 
+2. Create Image from text (**T2I**) with Dall-e:
+
+```sh
+python3 penai_t2imagev2.py
+```
+
 ---
+
+## Venv
 
 ```sh
 #python -m venv solvingerror_venv #create the venv
