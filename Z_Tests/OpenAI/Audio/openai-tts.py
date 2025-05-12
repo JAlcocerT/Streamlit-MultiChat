@@ -1,7 +1,8 @@
 #https://platform.openai.com/docs/models/gpt-4o-mini-tts
-
-
 #https://platform.openai.com/docs/models/gpt-4o-mini-tts
+
+#python3 openai-tts.py
+#sox -r 24000 -b 16 -e signed-integer -c 1 -t raw audio_reply.pcm audio_reply.wav
 
 import os
 from dotenv import load_dotenv
@@ -17,7 +18,20 @@ from openai import AsyncOpenAI
 
 openai = AsyncOpenAI()
 
-input_text = """Ah, you got a package gone missing, huh? Sounds like trouble. Lemme see what I can dig up."""
+#input_text = """Ah, you got a package gone missing, huh? Sounds like trouble. Lemme see what I can dig up."""
+file_path = "yt.md"
+
+# Read the text content from the file
+try:
+    with open(file_path, 'r', encoding='utf-8') as file:
+        input_text = file.read()
+    print(f"Successfully read text from '{file_path}'.")
+except FileNotFoundError:
+    print(f"Error: The file '{file_path}' was not found.")
+    input_text = None  # Or provide a default value
+except Exception as e:
+    print(f"An error occurred while reading the file: {e}")
+    input_text = None  # Or provide a default value
 
 instructions_text = """Affect: a mysterious noir detective\n\nTone: Cool, detached, but subtly reassuring—like they've seen it all and know how to handle a missing package like it's just another case.\n\nDelivery: Slow and deliberate, with dramatic pauses to build suspense, as if every detail matters in this investigation.\n\nEmotion: A mix of world-weariness and quiet determination, with just a hint of dry humor to keep things from getting too grim.\n\nPunctuation: Short, punchy sentences with ellipses and dashes to create rhythm and tension, mimicking the inner monologue of a detective piecing together clues."""
 

@@ -2,6 +2,7 @@ multichat/
 *_venv/
 **/.env
 
+*.wav
 *.pcm
 
 uv.lock
