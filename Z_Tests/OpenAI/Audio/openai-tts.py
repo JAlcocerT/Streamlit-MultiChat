@@ -1,8 +1,12 @@
 #https://platform.openai.com/docs/models/gpt-4o-mini-tts
 #https://platform.openai.com/docs/models/gpt-4o-mini-tts
 
+
+#cd Z_Tests/OpenAI/Audio/
 #python3 openai-tts.py
 #sox -r 24000 -b 16 -e signed-integer -c 1 -t raw audio_reply.pcm audio_reply.wav
+
+#https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/#shorts
 
 import os
 from dotenv import load_dotenv
@@ -40,7 +44,8 @@ async def main() -> None:
 
     async with openai.audio.speech.with_streaming_response.create(
         model="gpt-4o-mini-tts",
-        voice="coral", #onyx
+        voice="echo", #onyx
+        ##onyx #coral #CHANGE THE VOICE HERE! #🎭 OpenAI TTS voices (alloy, ash, ballad, coral, echo, fable, onyx, nova, sage, shimmer, verse)
         input=input_text,
         instructions=instructions_text,
         response_format="pcm",
