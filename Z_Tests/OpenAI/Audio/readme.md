@@ -18,7 +18,7 @@ Then, provide the API Keys and run the scripts:
 sudo apt install libportaudio2
 pip install -r requirements.txt
 #pip freeze > requirements-output.txt
-python3 openai-tts.py
+python3 openai-tts.py #uses yt.md
 
 sox -r 24000 -b 16 -e signed-integer -c 1 -t raw audio_reply.pcm audio_reply.wav
 #sox -r 24000 -b 16 -e signed-integer -c 1 -t raw audio_reply.pcm audio_reply.mp3
